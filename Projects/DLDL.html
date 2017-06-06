@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Deep Label Distribution Learning with Label Ambiguity</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks different from traditional classification. Based on this observation, we convert the label of each image into a discrete label distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label classification and semantic segmentation tasks.">
+<meta name="keywords" content="label distribution; deep learning; age estimation; head pose estimation; semantic segmentation.">
+<link rel="author" href="http://lamda.nju.edu.cn/gaobb/">
+
+<!-- Fonts and stuff -->
+<link href="./project_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./project_files/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./project_files/iconize.css">
+<script async="" src="./project_files/prettify.js"></script>
+<script src="./project_files/jquery-1.8.3.min.js" type="text/javascript" ></script> 
+<script src="./project_files/jquery.elevatezoom.js" type="text/javascript"></script> 
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div id="content">
+<div id="content-inner">
+<div class="section head">
+<h1>Deep Label Distribution Learning with Label Ambiguity</h1>
+
+	<div class="authors">
+	  <a href="http://lamda.nju.edu.cn/gaobb/">Bin-Bin Gao<sup>1</sup>,</a>&nbsp;&nbsp;
+	  <a href="">Chao Xing<sup>2</sup>,</a>&nbsp;&nbsp;
+	  <a href="http://lamda.nju.edu.cn/xiecw/">Chen-Wei Xie<sup>1</sup>,</a>&nbsp;&nbsp;
+          <a href="http://cs.nju.edu.cn/wujx/">Jianxin Wu<sup>1</sup>,</a>&nbsp;&nbsp;
+	  <a href="http://cse.seu.edu.cn/people/xgeng/index.htm">Xin Geng<sup>2</sup></a>
+	</div>
+
+	<div class="affiliations">
+	  <sup>1</sup><a href="http://keysoftlab.nju.edu.cn/"> National Key Laboratory for Novel Software Technology, </a>
+	  <a href="http://www.nju.edu.cn/">Nanjing University, </a>
+	  <a > Nanjing 210023, China</a>
+	  <br>
+	  <sup>2</sup>&nbsp;<a href="http://cse.seu.edu.cn/CSE/UI/">School of Computer Science and Engineering, </a>
+	  <a href="http://www.seu.edu.cn/">Southeast University,  </a>
+	  <a >Nanjing 210096, China,</a>
+	</div>
+
+	<div class="venue"><a href="http://signalprocessingsociety.org/publications-resources/ieee-transactions-image-processing"> IEEE Trans. Image Processing</a>, 26(6), 2017:2825-2838. DOI: <a href="https://doi.org/10.1109/TIP.2017.2689998">Link</a>.</div>
+        </div>
+        <br>
+        <center><img src="./DLDL_files/DLDL_LD.png" border="0" width="95%"></center>
+        <div class="section abstract" style="clear: both;text-align:justify; text-justify:inter-ideograph;">
+<h2>Abstract</h2><br>
+<p>
+Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks different from traditional classification. Based on this observation, we convert the label of each image into a discrete label distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label classification and semantic segmentation tasks.
+</p>
+
+<div class="venue"> <font color="blue"> Source code and pre-trained models are coming soon... </font><!--<a href="http://lamda.nju.edu.cn/gaobb/" target="_blank">here</a>--></div>
+
+</div>
+</div>
+</div>
+
+<div id="content">
+<div id="content-inner">
+<div class="section results">
+<h2>Main Results</h2>
+<h3><font color="red">Task1:</font> Age estimation</h3>
+<center><img  src="./DLDL_files/DLDL_Age.png" border="0" width="100%"></center>
+
+<h3><font color="red">Task2:</font> Head pose estimation</h3>
+<center><img  src="./DLDL_files/DLDL_Pose.png" border="0" width="95%"></center>
+
+
+<h3><font color="red">Task3:</font> Multi-label classification</h3>
+<p>
+<center><img  src="./DLDL_files/DLDL_ML.png" border="0" width="95%"></center>
+</p>
+
+<h3><font color="red">Task4:</font> Semantic segmentation</h3>
+<center><img src="./DLDL_files/DLDL_SS.png" border="0" width="45%"></center>
+</div>
+</div>
+</div>
+
+
+<div id="content">
+<div id="content-inner">
+<div class="section results">
+<h2>Disscussion</h2>
+<h3>Feature visualization.</h3>
+We show the low-dimensional embeddings of all baseline methods using the t-SNE algorithm on ChaLearn, Morph, Pointing'04 and AFLW validation images. It can be observed that there are more clear semantic clusterings for those methods based on deep label distribution than others. 
+
+<center><br><img id="zoom_0" src="./DLDL_files/DLDL_Rv1.png" width="95%" hspace= 0"></a><br></center>
+<center>Visualizations of hand-crafted and deep learned features using the t-SNE algorithm on ChaLearn, Morph, Pointing'04 and AFLW validation sets.</center>
+<div style="text-align:center;">
+<br>
+
+<li class="largegrid">
+<div class="largegriditem">
+<a href="./DLDL_files/chalearn_dldl_48.jpg" target="_blank" class="imageLink"><img id="zoom_1" src="./DLDL_files/chalearn_dldl_48.jpg" border="0" height="100%" hspace=2></a><br>
+           ChaLearn<br><a href="./DLDL_files/chalearn_dldl_48.jpg"></a>
+</div>
+</li>
+
+<li class="largegrid" height= 200px;>
+<div class="largegriditem">
+<a href="./DLDL_files/morph_dldl_48.jpg" target="_blank" class="imageLink"><img id="zoom_2" src="./DLDL_files/morph_dldl_48.jpg" height="54%" hspace=2" width="24%" hspace=2></a><br>
+           Morph<br><a href="./DLDL_files/morph_dldl_48.jpg"></a>
+</div>
+</li>
+
+<li class="largegrid">
+<div class="largegriditem">
+<a href="./DLDL_files/point04_dldl_48.jpg" target="_blank" class="imageLink"><img id="zoom_3" src="./DLDL_files/point04_dldl_48.jpg" height="54%" hspace=2" width="24%" hspace=2" width="24%" hspace=2></a><br>
+           Pointing'o4<br><a href="./DLDL_files/point04_dldl_48.jpg"></a>
+</div>
+</li>
+
+<li class="largegrid">
+<div class="largegriditem">
+<a href="./DLDL_files/alfw_dldl_48.jpg" target="_blank" class="imageLink"><img id="zoom_4" src="./DLDL_files/alfw_dldl_48.jpg" height="54%" hspace=2" width="24%" hspace=2" width="24%" hspace=2></a><br>
+           ALFW<br><a href="./DLDL_files/alfw_dldl_48.jpg"></a>
+</div>
+</li>
+</div>
+<br>
+
+
+<h3>Reduce over-fitting.</h3>
+DLDL can effectively reduce over-fitting when the training set is small.
+
+<center><img  src="./DLDL_files/chalearn_train.png" border="0" width="45%">
+        <img  src="./DLDL_files/aflw_train.png" border="0" width="45%"></center>
+<center>Comparisons of training and validation MAE of DLDL and all baseline methods on the ChaLearn and AFLW datasets</center>
+
+<h3>Robust performance.</h3>
+DLDL is more amenable to small datasets or sparse labels than C-ConvNet and R-ConvNet.
+
+
+<center><img  src="./DLDL_files/morph_train.png" border="0" width="45%">
+        <img  src="./DLDL_files/bjut_train.png" border="0" width="45%"></center>
+<center>Comparisons of training and validation MAE of DLDL and all baseline methods on the Morph and BJUT-3D datasets</center>
+
+
+
+<h3>Analyze the hyper-parameter.</h3>
+<center></center>
+<div style="text-align:center;">
+<br>
+<li class="largegrid">
+<div class="largegriditem">
+<a href="./DLDL_files/Morph_sigma.png" target="_blank" class="imageLink"><img id="zoom_9" src="./DLDL_files/Morph_sigma.png" width="20%" hspace=2></a><br>
+           Morph<br>
+</div>
+</li>
+
+<li class="largegrid">
+<div class="largegriditem">
+<a href="./DLDL_files/point_sigma.png" target="_blank" class="imageLink"><img id="zoom_10" src="./DLDL_files/point_sigma.png" width="20%" hspace=2 ></a><br>
+           Pointing'04<br>
+</div>
+</li>
+
+<li class="largegrid">
+<div class="largegriditem">
+<a href="./DLDL_files/ML_PD.png" target="_blank" class="imageLink"><img id="zoom_11" src="./DLDL_files/ML_PD.png" width="20%" hspace=2></a><br>
+           VOC2007<br>
+</div>
+</li>
+
+<li class="largegrid">
+<div class="largegriditem">
+<a href="./DLDL_files/chalearn_dlnum.png" target="_blank" class="imageLink"><img id="zoom_12" src="./DLDL_files/chalearn_dlnum.png" width="20%" hspace=2></a><br>
+           ChaLearn<br>
+</div>
+</li>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+<div id="content">
+<div id="content-inner">
+<div class="section downloads">
+<!--
+	<h2>Demo</h2><center>
+      	<iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+      </div></center>
+      <div class="section downloads">
+	  !-->
+	<h2>Downloads</h2><br>
+	<center>
+	  <ul>
+            <li class="grid">
+	      <div class="griditem">
+		<a href="./DLDL_files/DLDL_paper.png" target="_blank" class="imageLink"><img src="./DLDL_files/DLDL_paper.png"></a><br>
+		  Paper<br><a href="http://lamda.nju.edu.cn/gaobb/pubs/TIP2017_DLDL.pdf">PDF, 5.6 MB</a>
+		</div>
+	      </li>
+	    </center>
+	    </div>
+<br>
+ <div class="section list">
+	<h2>Citation</h2>
+	
+	<div class="section bibtex">
+        <pre>@ARTICLE{gao2016deep,
+         author={Gao, Bin-Bin and Xing, Chao and Xie, Chen-Wei and Wu, Jianxin and Geng, Xin},
+         title={Deep Label Distribution Learning with Label Ambiguity},
+         journal={IEEE Transactions on Image Processing},
+         year={2017}
+         }</pre>
+	  </div>
+      </div>
+	
+     <div class="section contact">
+	<h2>Contact</h2><br>
+
+	Please contact Prof. Jianxin Wu (<a href="mailto:wujx2001@gmail.com">email</a>) and Bin-Bin Gao (<a href="mailto:gaobb@lamda.nju.edu.cn">email</a>) for questions about the paper.
+	</div>
+    </div>
+  </div>
+<div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3211122&c=9633679" alt="AmazingCounters.com"></a></div>
+<script>
+    for(var i=0;i<=12;i++){
+        $("#zoom_"+i).elevateZoom();
+    }
+</script>
+</body></html>
