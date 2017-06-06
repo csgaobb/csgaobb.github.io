@@ -96,7 +96,6 @@ div.section {
   background: #fff;
 }
 
-
 div.spanner {
   clear: both;
 }
@@ -136,6 +135,12 @@ pre, code {
 div.paper pre {
   font-size: 0.9em;
 }
+
+div.searchbox {
+  float: right;
+  margin-right: 0em;
+  padding-top: 0.35em;
+  width: 25em; }
 
 
 /* latin-ext */
