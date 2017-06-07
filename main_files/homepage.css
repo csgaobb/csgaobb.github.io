@@ -98,11 +98,8 @@ div.section {
 
 div.smallsection {
   clear: both;
-  padding-left: 20em;
-  padding-right: 20em;
-  margin-bottom: 0.0em;
-  height: 180px;
-  background: #fff;
+  height: 150px;
+  background: #181818;
 }
 
 
