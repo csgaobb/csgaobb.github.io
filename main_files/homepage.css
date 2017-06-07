@@ -96,6 +96,16 @@ div.section {
   background: #fff;
 }
 
+div.smallsection {
+  clear: both;
+  padding-left: 20em;
+  padding-right: 20em;
+  margin-bottom: 0.0em;
+  height: 180px;
+  background: #fff;
+}
+
+
 div.spanner {
   clear: both;
 }
