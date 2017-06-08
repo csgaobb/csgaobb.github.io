@@ -104,6 +104,9 @@ Chongqing China. Since september 2014, I was admitted to study for a Ph.D. degre
 <h2 id="confpapers">Publications 
 [<a href="http://scholar.google.com/citations?user=yYviZ-oAAAAJ&hl=en">Google Scholar</a>]</h2>
 
+<a class="buttonAA" data-toggle="collapse" data-parent="#Ade20kabs" href="#Ade20kabs-list">Abstract</a>&nbsp
+<a href="http://groups.csail.mit.edu/vision/datasets/ADE20K/" target="_blank" class="buttonPP">Dataset</a>&nbsp
+<a class="buttonSS" data-toggle="collapse" data-parent="#Ade20k" href="#Ade20k-list">Bibtex</a><br/>
 
 <div class="paper" id="TIP17"><img class="paper" 
 src="./Imgs_files/DLDL_LD.png" 
@@ -113,6 +116,10 @@ title="Deep Label Distribution Learning with Label Ambiguity ">
 IEEE Transactions on Image Processing (<strong>TIP</strong>), 2017.<br>
 [ <a href="./Pub_files/TIP2017_DLDL.pdf">Paper</a>  ] 
 [ <a href="./Projects/DLDL.html">Project Page</a>  ]
+[ <a href="javascript:toggleabs('TIP17')">Abstrcat</a> ]
+<preabs style="display: none;">
+Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks different from traditional classification. Based on this observation, we convert the label of each image into a discrete label distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label classification and semantic segmentation tasks.
+</preabs>      
 [ <a href="javascript:togglebib('TIP17')">BibTeX</a> ]
 <pre style="display: none;">@ARTICLE{gao2016deep,
          author={Gao, Bin-Bin and Xing, Chao and Xie, Chen-Wei and Wu, Jianxin and Geng, Xin},
@@ -124,7 +131,6 @@ IEEE Transactions on Image Processing (<strong>TIP</strong>), 2017.<br>
          pages={2825-2838}, 
          }
 </pre>
-
 <br>
 </div>
 <div class="spanner"></div>
@@ -137,6 +143,37 @@ title="Exploit Bounding Box Annotations for Multi-label Object Recognition">
 <i>Hao Yang, Joey Tiany Zhou, Yu Zhang, <strong>Bin-Bin Gao</strong>, Jianxin Wu and Jianfei Cai</i><br>
 IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), Las Vegas, NV, USA, 2016.<br>
 [ <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_Bounding_Box_CVPR_2016_paper.pdf">Paper</a>  ]
+[ <a href="javascript:toggleabs('CVPR16')">Abstrcat</a> ]
+<preabs style="display: none;">
+Convolutional neural networks (CNNs) have shown
+great performance as general feature representations for
+object recognition applications. However, for multi-label
+images that contain multiple objects from different categories,
+scales and locations, global CNN features are not
+optimal. In this paper, we incorporate local information
+to enhance the feature discriminative power. In particular,
+we first extract object proposals from each image. With
+each image treated as a bag and object proposals extracted
+from it treated as instances, we transform the multi-label
+recognition problem into a multi-class multi-instance learning
+problem. Then, in addition to extracting the typical
+CNN feature representation from each proposal, we propose
+to make use of ground-truth bounding box annotations
+(strong labels) to add another level of local information
+by using nearest-neighbor relationships of local regions to
+form a multi-view pipeline. The proposed multi-view multiinstance
+framework utilizes both weak and strong labels
+effectively, and more importantly it has the generalization
+ability to even boost the performance of unseen categories
+by partial strong labels from other categories. Our framework
+is extensively compared with state-of-the-art handcrafted
+feature based methods and CNN based methods on
+two multi-label benchmark datasets. The experimental results
+validate the discriminative power and the generalization
+ability of the proposed framework. With strong labels,
+our framework is able to achieve state-of-the-art results in
+both datasets.
+</preabs>
 [ <a href="javascript:togglebib('CVPR16')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{yang2016exploit,
   title={Exploit bounding box annotations for multi-label object recognition},
@@ -158,6 +195,24 @@ title="Representing Sets of Instances for Visual Recognition">
 <i>Jianxin Wu, <strong>Bin-Bin Gao</strong> and Guoqing Liu </i><br>
 AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), Phoenix, Arizona, USA, 2016.<br>
 [ <a href="http://cs.nju.edu.cn/_upload/tpl/00/ed/237/template237/paper/AAAI2016_D3.pdf">Paper</a>  ] 
+[ <a href="javascript:toggleabs('AAAI2016')">Abstrcat</a> ]
+<preabs style="display: none;">
+In computer vision, a complex entity such as an image or
+video is often represented as a set of instance vectors, which
+are extracted from different parts of that entity. Thus, it is
+essential to design a representation to encode information
+in a set of instances robustly. Existing methods such as FV
+and VLAD are designed based on a generative perspective,
+and their performances fluctuate when difference types of instance
+vectors are used (i.e., they are not robust). The proposed
+D3 method effectively compares two sets as two distributions,
+and proposes a directional total variation distance
+(DTVD) to measure their dissimilarity. Furthermore, a robust
+classifier-based method is proposed to estimate DTVD robustly,
+and to efficiently represent these sets. D3 is evaluated
+in action and image recognition tasks. It achieves excellent
+robustness, accuracy and speed.
+</preabs>
 [ <a href="javascript:togglebib('AAAI2016')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{wu2016representing,
   title={Representing Sets of Instances for Visual Recognition.},
@@ -180,6 +235,31 @@ title="Deep Label Distribution Learning for Apparent Age Estimation ">
 ICCV’15 ChaLearn Looking at People workshop, Santiago, Chile, 2015.<br>
 [ <a href="http://lamda.nju.edu.cn/gaobb/pubs/iccvw15_AGE.pdf">Paper</a>  ]  
 [ <a href="http://lamda.nju.edu.cn/gaobb/pubs/iccvw15_AGE_slide.pdf">Slides</a> ] 
+[ <a href="javascript:toggleabs('ICCV15_AGE')">Abstrcat</a> ]
+<preabs style="display: none;">
+In the age estimation competition organized by
+ChaLearn, apparent ages of images are provided. Uncertainty
+of each apparent age is induced because each image
+is labeled by multiple individuals. Such uncertainty makes
+this age estimation task different from common chronological
+age estimation tasks. In this paper, we propose a
+method using deep CNN (Convolutional Neural Network)
+with distribution-based loss functions. Using distributions
+as the training tasks can exploit the uncertainty induced by
+manual labeling to learn a better model than using ages as
+the target. To the best of our knowledge, this is one of the
+first attempts to use the distribution as the target of deep
+learning. In our method, two kinds of deep CNN models are
+built with different architectures. After pre-training each
+deep CNN model with different datasets as one corresponding
+stream, the competition dataset is then used to fine-tune
+both deep CNN models. Moreover, we fuse the results of
+two streams as the final predicted ages. In the final testing
+dataset provided by competition, the age estimation performance
+of our method is 0.3057, which is significantly better
+than the human-level performance (0.34) provided by the
+competition organizers.
+</preabs>
 [ <a href="javascript:togglebib('ICCV15_AGE')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{yang2015deep,
   title={Deep label distribution learning for apparent age estimation},
@@ -202,6 +282,28 @@ title="Deep Spatial Pyramid Ensemble for Cultural Event  Recognition">
 ICCV’15 ChaLearn Looking at People workshop, Santiago, Chile, 2015.<br>
 [ <a href="http://lamda.nju.edu.cn/gaobb/pubs/iccvw15_CER.pdf">Paper</a>  ]  
 [ <a href="http://lamda.nju.edu.cn/gaobb/pubs/iccvw15_CER_slide.pdf">Slides</a> ] 
+[ <a href="javascript:toggleabs('ICCV15_CER')">Abstrcat</a> ]
+<preabs style="display: none;">
+Semantic event recognition based only on image-based
+cues is a challenging problem in computer vision. In order
+to capture rich information and exploit important cues
+like human poses, human garments and scene categories,
+we propose the Deep Spatial Pyramid Ensemble framework,
+which is mainly based on our previous work, i.e., Deep Spatial
+Pyramid (DSP). DSP could build universal and powerful
+image representations from CNN models. Specifically,
+we employ five deep networks trained on different data
+sources to extract five corresponding DSP representations
+for event recognition images. For combining the complementary
+information from different DSP representations, we
+ensemble these features by both “early fusion” and “late
+fusion”. Finally, based on the proposed framework, we
+come up with a solution for the track of the Cultural Event
+Recognition competition at the ChaLearn Looking at People
+(LAP) challenge in association with ICCV 2015. Our
+framework achieved one of the best cultural event recognition
+performance in this challenge.
+</preabs>
 [ <a href="javascript:togglebib('ICCV15_CER')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{wei2015deep,
   title={Deep spatial pyramid ensemble for cultural event recognition},
@@ -224,6 +326,21 @@ title="Coordinate Descent Fuzzy Twin Support Vector Machine for Classification">
 IEEE 14th International Conference on Machine Learning and Applications, Miami, Florida, USA, 2015, pp. 7--12.<br>
 [ <a href="http://lamda.nju.edu.cn/gaobb/pubs/icmla15_FTWSVM.pdf">Paper</a>  ] 
 [ <a href="https://github.com/gaobb/CDFTSVM">Code</a> ]
+[ <a href="javascript:toggleabs('ICMLA15')">Abstrcat</a> ]
+<preabs style="display: none;">
+In this paper, we develop a novel coordinate descent
+fuzzy twin SVM (CDFTSVM) for classification. The proposed
+CDFTSVM not only inherits the advantages of twin SVM but
+also leads to a rapid and robust classification results. Specifically,
+our CDFTSVM has two distinguished advantages: (1) An effective
+fuzzy membership function is produced for removing the noise
+incurred by the contaminant inputs. (2) A coordinate descent
+strategy with shrinking by active set is used to deal with the
+computational complexity brought by the high dimensional input.
+In addition, a series of simulation experiments are conducted to
+verify the performance of the CDFTSVM, which further supports
+our previous claims.
+</preabs>
 [ <a href="javascript:togglebib('ICMLA15')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{gao2015coordinate,
   title={Coordinate Descent Fuzzy Twin Support Vector Machine for Classification},
@@ -253,6 +370,27 @@ title="Deep Spatial Pyramid: The Devil is Once Again in the Details">
 arXiv:1504.05277v2, 2015. <br>
 [ <a href="https://arxiv.org/pdf/1504.05277v2.pdf">Paper</a>  ] 
 [ <a href="https://github.com/gaobb/DSP">Code</a> ]
+[ <a href="javascript:toggleabs('DSP')">Abstrcat</a> ]
+<preabs style="display: none;">
+In this paper we show that by carefully making good
+choices for various detailed but important factors in a visual
+recognition framework using deep learning features,
+one can achieve a simple, efficient, yet highly accurate image
+classification system. We first list 5 important factors,
+based on both existing researches and ideas proposed in this
+paper. These important detailed factors include: 1) `2 matrix
+normalization is more effective than unnormalized or `2
+vector normalization, 2) the proposed natural deep spatial
+pyramid is very effective, and 3) a very small K in Fisher
+Vectors surprisingly achieves higher accuracy than normally
+used large K values. Along with other choices (convolutional
+activations and multiple scales), the proposed
+DSP framework is not only intuitive and efficient, but also
+achieves excellent classification accuracy on many benchmark
+datasets. For example, DSP’s accuracy on SUN397 is
+59.78%, significantly higher than previous state-of-the-art
+(53.86%).
+</preabs>
 [ <a href="javascript:togglebib('DSP')">BibTeX</a> ]
 <pre style="display: none;">@article{GaoDSP15,
   author    = {Gao, Bin-Bin and Wei, Xiu-Shen and Wu, Jianxin and Lin Weiyao},

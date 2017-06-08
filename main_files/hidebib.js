@@ -23,3 +23,16 @@ function togglebib(paperid)
         }
     }
 }
+
+function toggleabs(paperid)
+{
+    var paper = document.getElementById(paperid) ;
+    var bib = paper.getElementsByTagName('preabs') ;
+    if (bib.length > 0) {
+        if (bib [0] .style.display == 'none') {
+            bib [0] .style.display = 'block' ;
+        } else {
+            bib [0] .style.display = 'none' ;
+        }
+    }
+}
