@@ -1,0 +1,27 @@
+.owl-theme .owl-controls {
+	text-align: center; margin-top: 10px;
+}
+.owl-theme .owl-controls .owl-buttons div {
+	background: rgb(134, 151, 145); margin: 5px; padding: 3px 10px; border-radius: 30px; color: rgb(255, 255, 255); font-size: 12px; display: inline-block; -ms-zoom: 1; opacity: 0.5; -webkit-border-radius: 30px; -moz-border-radius: 30px;
+}
+.owl-theme .clickable.owl-controls .owl-buttons div:hover {
+	text-decoration: none; opacity: 1;
+}
+.owl-theme .owl-controls .owl-page {
+	display: inline-block; -ms-zoom: 1;
+}
+.owl-theme .owl-controls .owl-page span {
+	background: rgb(134, 151, 145); margin: 5px 7px; border-radius: 20px; width: 12px; height: 12px; display: block; opacity: 0.5; -webkit-border-radius: 20px; -moz-border-radius: 20px;
+}
+.owl-theme .owl-controls .active.owl-page span {
+	opacity: 1;
+}
+.owl-theme .clickable.owl-controls .owl-page:hover span {
+	opacity: 1;
+}
+.owl-theme .owl-controls .owl-page span.owl-numbers {
+	padding: 2px 10px; border-radius: 30px; width: auto; height: auto; color: rgb(255, 255, 255); font-size: 12px; -webkit-border-radius: 30px; -moz-border-radius: 30px;
+}
+.loading.owl-item {
+	background: url("AjaxLoader.gif") no-repeat center; min-height: 150px;
+}
