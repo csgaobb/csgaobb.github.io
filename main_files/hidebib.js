@@ -1,8 +1,8 @@
 function hideallbibs()
 {
-    var el = document.getElementsByTagName("div") ;
+    var el = document.getElementsByTagName("li") ;
     for (var i = 0 ; i < el.length ; ++i) {
-        if (el[i].className == "paper") {
+        if (el[i].className == "pub") {
             var bib = el[i].getElementsByTagName("pre") ;
             if (bib.length > 0) {
                 bib [0] .style.display = 'none' ;
