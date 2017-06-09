@@ -60,7 +60,8 @@ body {
   width: 900px;
   font-family: Lato, Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  background: #181818;
+  background: #181818;  
+  /*background: url(../Imgs_files/bg1.jpg)*/
 }
 
 h2 {
