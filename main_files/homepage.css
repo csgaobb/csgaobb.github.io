@@ -167,9 +167,8 @@ div.paper pre {
 div.searchbox {
   float: right;
   margin-right: 0em;
-  padding-top: 0.35em;
-  width: 25em; }
-
+  padding-top: 0.25em;
+  width: 20em; }
 
 /* latin-ext */
 @font-face {
