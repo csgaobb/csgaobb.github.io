@@ -116,12 +116,22 @@ div.section {
 
 div.smallsection {
   clear: both;
-  padding-left: 350px;
-  padding-right: 350px;
+  padding-left: 300px;
+  padding-right: 300px;
   margin-bottom: 0.0px;
   height: 200px;
   background: #181818;
 }
+
+
+div.comsection {
+  clear: both;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  margin-bottom: 0.0em;
+  background: #181818;
+}
+
 
 
 div.spanner {
