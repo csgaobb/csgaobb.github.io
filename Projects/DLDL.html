@@ -52,7 +52,10 @@
 Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks different from traditional classification. Based on this observation, we convert the label of each image into a discrete label distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label classification and semantic segmentation tasks.
 </p>
 
-<div class="venue"> <font color="blue"> Source code and pre-trained models are coming soon... </font><!--<a href="http://lamda.nju.edu.cn/gaobb/" target="_blank">here</a>--></div>
+<div class="venue"> <font color="blue"> 
+<img src="./DLDL_files/update.gif" > 
+The testing code and pre-trained models are available <a href="https://github.com/gaobb/DLDL">here </a>(11/20/2017)</font>. 
+</div>
 
 </div>
 </div>
