@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Age Estimation Using Expectation of Label Distribution Learning</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="Age estimation performance has been greatly improved by using convolutional neural network. However, existing methods have an inconsistency between the training objectives and evaluation metric, so they may be suboptimal. In addition, these methods always adopt image classification or face recognition models with a large amount of parameters which bring expensive computation cost and storage overhead. To alleviate these issues, we design a light network architecture and propose a unified framework which can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions. ">
+<meta name="keywords" content="label distribution; deep learning; convolutional neural network; age estimation.">
+<link rel="author" href="http://lamda.nju.edu.cn/gaobb/">
+
+<!-- Fonts and stuff -->
+<link href="./project_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./project_files/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./project_files/iconize.css">
+<script async="" src="./project_files/prettify.js"></script>
+<script src="./project_files/jquery-1.8.3.min.js" type="text/javascript" ></script> 
+<script src="./project_files/jquery.elevatezoom.js" type="text/javascript"></script> 
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div id="content">
+<div id="content-inner">
+<div class="section head">
+<h1>Age Estimation Using Expectation of Label</h1>
+<h1>Distribution Learning</h1>
+
+	<div class="authors">
+	  <a href="http://lamda.nju.edu.cn/gaobb/">Bin-Bin Gao<sup>1</sup>,</a>&nbsp;&nbsp;
+	  <a href="http://lamda.nju.edu.cn/zhouhy/">Hong-Yu Zhou<sup>1</sup>,</a>&nbsp;&nbsp;
+          <a href="http://cs.nju.edu.cn/wujx/">Jianxin Wu<sup>1</sup>,</a>&nbsp;&nbsp;
+	  <a href="http://cse.seu.edu.cn/people/xgeng/index.htm">Xin Geng<sup>2</sup></a>
+	</div>
+
+	<div class="affiliations">
+	  <sup>1</sup><a href="http://keysoftlab.nju.edu.cn/"> National Key Laboratory for Novel Software Technology, </a>
+	  <a href="http://www.nju.edu.cn/">Nanjing University, </a>
+	  <a > Nanjing 210023, China</a>
+	  <br>
+	  <sup>2</sup>&nbsp;<a href="http://cse.seu.edu.cn/labs/edulab/labsite/">MOE Key Laboratory of Computer Network and Information Integration, </a>
+	  <a href="http://www.seu.edu.cn/">Southeast University,  </a>
+	  <a >Nanjing 210096, China,</a>
+	</div>
+
+	<div class="venue">Proceedings of The 27th International Joint Conference on Artificial Intelligence<a href="https://www.ijcai-18.org/"> (IJCAI 2018)</a>, 2018.</div>
+        </div>
+        <br>
+        <center><img src="./DLDL-v2_files/DLDL-v2-Frame.png" border="0" width="95%"></center>
+        <div class="section abstract" style="clear: both;text-align:justify; text-justify:inter-ideograph;">
+
+<h2>Abstract</h2><br>
+<p>
+Age estimation performance has been greatly improved by using convolutional neural network. However, existing methods have an inconsistency between the training objectives and evaluation metric, so they may be suboptimal. In addition, these methods always adopt image classification or face recognition models with a large amount of parameters which bring expensive computation cost and storage overhead. To alleviate these issues, we design a light network architecture and propose a unified framework which can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions. 
+</p>
+
+<!--<div class="venue"> <font color="blue"> 
+<img src="./DLDL-v2_files/update.gif" > 
+The source code and pre-trained models are coming soon.</a>(4/25/2018)</font>. 
+</div>-->
+
+</div>
+</div>
+</div>
+
+<div id="content">
+<div id="content-inner">
+<div class="section downloads">	<h2>Downloads</h2><br>
+<div class="venue"> <font color="blue"> 
+<img src="./logo/update.gif" > 
+The source code are coming soon.</a></font>
+</div>
+<div class="venue"> <font color="blue"> 
+<img src="./logo/update.gif" > 
+The pre-trained models and align&cropped face imgaes are publicly avaliable.</a>(May 1, 2018)</font>. 
+</div>
+<center>
+             <li class="grid">
+	      <div class="griditem">
+		<a href="https://pan.baidu.com/s/1_HZ6P1DV9kVT4NlW3x2zFA" target="_blank" class="imageLink"><img src="./logo/targz.svg"></a><br>
+		  Align&Cropped<br><a href="https://pan.baidu.com/s/1_HZ6P1DV9kVT4NlW3x2zFA">Images</a>
+		</div>
+	      </li>
+             <li class="grid">
+	      <div class="griditem">
+		<a href="https://pan.baidu.com/s/1RResT1cSTFhfrKO7-K3OeA" target="_blank" class="imageLink"><img src="./logo/csv.png"></a><br>
+		  Train&Test list<br><a href="https://pan.baidu.com/s/1RResT1cSTFhfrKO7-K3OeA">Lists</a>
+		</div>
+	      </li>
+             <li class="grid">
+	      <div class="griditem">
+		<a href="https://pan.baidu.com/s/1XFUZzEMhdyU68ATYFU0-IA" target="_blank" class="imageLink"><img src="./logo/Torch.png"></a><br>
+		  ThinAgeNet<br><a href="https://pan.baidu.com/s/1XFUZzEMhdyU68ATYFU0-IA">14.9 MB</a>
+		</div>
+	      </li>
+            <li class="grid">
+	      <div class="griditem">
+		<a href="https://pan.baidu.com/s/1gBmM9FTOmbVGd8B3xeuAwA" target="_blank" class="imageLink"><img src="./logo/Torch.png"></a><br>
+		  TinyAgeNet<br><a href="https://pan.baidu.com/s/1gBmM9FTOmbVGd8B3xeuAwA">3.8 MB</a>
+		</div>
+	      </li>
+              <li class="grid">
+	      <div class="griditem">
+		<a href="https://github.com/gaobb/DLDL-v2" target="_blank" class="imageLink"><img src="./logo/github.png"></a><br>
+		  Code<br><a href="https://github.com/gaobb/DLDL-v2">Coming soon</a>
+		</div>
+	      </li>
+             <li class="grid">
+	      <div class="gridpaperitem">
+		<a href="http://lamda.nju.edu.cn/gaobb/Pub_files/ijcai18_DLDL-v2.pdf" target="_blank" class="imageLink"><img src="./DLDL-v2_files/DLDL-v2-Paper.png"></a><br>
+		  Paper<br><a href="http://lamda.nju.edu.cn/gaobb/Pub_files/IJCAI2018_DLDLv2.pdf">PDF, 2.8 MB</a>
+		</div>
+	      </li>
+</center>
+</br>
+</div>	
+</div>
+</div>
+</div>
+
+
+
+
+<div id="content">
+<div id="content-inner">
+<div class="section results">
+<h2>Main Results</h2>
+<h3><font color="red">Low Error:</font></h3>
+<center><img  src="./DLDL-v2_files/DLDL-v2-CPSoA.png" border="0" width="60%"></center>
+<h3><font color="red">High Efficiency:</font></h3>
+<center><img  src="./DLDL-v2_files/DLDL-v2-CTSoA.png" border="0" width="60%"></center>
+<h3><font color="red">Visual Assessment:</font></h3>
+<center><img  src="./DLDL-v2_files/DLDL-v2-Age.png" border="0" width="100%"></center>
+</div>
+</div>
+</div>
+
+
+
+<div id="content">
+<div id="content-inner">
+<div class="section results">
+<h2>Qualitative Results</h2>
+<center><br><img id="zoom_0" src="./DLDL-v2_files/ThinAgeNet-ChaLearn16-Oscar2017.gif" width="70%" hspace= 0"></a><br></center>
+<center>The propopsed <b>ThinAgeNet</b> (trained on ChaLearn16) at <a href="https://www.etalk.ca/get-bm-attachment/636306211467413791/1a6becde-46d9-451f-ba08-4aad50e2863c">Oscars 2017</a>.</center>
+<center><br><img id="zoom_2" src="./DLDL-v2_files/ThinAgeNet-ChaLearn16-eschool.gif" width="70%" hspace= 0"></a><br></center>
+<center>The propopsed <b>ThinAgeNet</b> (trained on ChaLearn16) at <a href="http://sites.isdschools.org/randall/useruploads/index/Mavs%20Visit%20Randall,Ott,Mill%20Creek%201.16_0014%20(1).JPG">Elementary school students</a>.</center>
+<div style="text-align:center;">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="content">
+<div id="content-inner">
+ <div class="section list">
+	<h2>Citation</h2>
+	
+	<div class="section bibtex">
+        <pre>@inproceedings{gao2018dldlv2,
+	title={Age Estimation Using Expectation of Label Distribution Learning},
+	author={Gao, Bin-Bin and Zhou, Hong-Yu and Wu, Jianxin and Geng, Xin},
+	booktitle={Proc. The 27th International Joint Conference on Artificial Intelligence (IJCAI 2018)},
+	year={2018}
+         }</pre>
+	  </div>
+      </div>
+	
+     <div class="section contact">
+	<h2>Contact</h2><br>
+
+	Please contact Prof. Jianxin Wu (<a href="mailto:wujx2001@gmail.com">email</a>) and Bin-Bin Gao (<a href="mailto:gaobb@lamda.nju.edu.cn">email</a>) for questions about the paper.
+	</div>
+    </div>
+  </div>
+<script>
+    for(var i=0;i<=12;i++){
+        $("#zoom_"+i).elevateZoom();
+    }
+</script>
+<div align="center"><a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3222084&c=9666565" alt="AmazingCounters.com"></a></div>
+<div style="clear: both;">
+<div class="smallsection">
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=DjDkr1MRGTiOIjBB8tRbCa_XJjEEN23PR5prq1Aa6k0&cl=ffffff&w=a"></script>
+</div>
+</div>
+
+</body></html>

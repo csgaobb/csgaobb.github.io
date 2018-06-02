@@ -5,7 +5,7 @@
 <!-- Meta tags for search engines to crawl -->
 <meta name="robots" content="index,follow">
 <meta name="description" content="Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks different from traditional classification. Based on this observation, we convert the label of each image into a discrete label distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label classification and semantic segmentation tasks.">
-<meta name="keywords" content="label distribution; deep learning; age estimation; head pose estimation; semantic segmentation.">
+<meta name="keywords" content="label distribution; deep learning; facial age estimation; head pose estimation; semantic segmentation.">
 <link rel="author" href="http://lamda.nju.edu.cn/gaobb/">
 
 <!-- Fonts and stuff -->
@@ -47,6 +47,7 @@
         <br>
         <center><img src="./DLDL_files/DLDL_LD.png" border="0" width="95%"></center>
         <div class="section abstract" style="clear: both;text-align:justify; text-justify:inter-ideograph;">
+
 <h2>Abstract</h2><br>
 <p>
 Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks different from traditional classification. Based on this observation, we convert the label of each image into a discrete label distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label classification and semantic segmentation tasks.
@@ -196,9 +197,9 @@ DLDL is more amenable to small datasets or sparse labels than C-ConvNet and R-Co
 	<center>
 	  <ul>
             <li class="grid">
-	      <div class="griditem">
+	      <div class="gridpaperitem">
 		<a href="./DLDL_files/DLDL_paper.png" target="_blank" class="imageLink"><img src="./DLDL_files/DLDL_paper.png"></a><br>
-		  Paper<br><a href="http://lamda.nju.edu.cn/gaobb/pubs/TIP2017_DLDL.pdf">PDF, 5.6 MB</a>
+		  Paper<br><a href="http://lamda.nju.edu.cn/gaobb/Pub_files/TIP2017_DLDL.pdf">PDF, 5.6 MB</a>
 		</div>
 	      </li>
 	    </center>
@@ -208,12 +209,15 @@ DLDL is more amenable to small datasets or sparse labels than C-ConvNet and R-Co
 	<h2>Citation</h2>
 	
 	<div class="section bibtex">
-        <pre>@ARTICLE{gao2016deep,
-         author={Gao, Bin-Bin and Xing, Chao and Xie, Chen-Wei and Wu, Jianxin and Geng, Xin},
-         title={Deep Label Distribution Learning with Label Ambiguity},
-         journal={IEEE Transactions on Image Processing},
-         year={2017}
-         }</pre>
+        <pre>@article{gao2017deep,
+  title={Deep Label Distribution Learning With Label Ambiguity},
+  author={Gao, Bin-Bin and Xing, Chao and Xie, Chen-Wei and Wu, Jianxin and Geng, Xin},
+  journal={{IEEE} Transactions on Image Processing},
+  volume={26},
+  number={6},
+  pages={2825--2838},
+  year={2017},
+}</pre>
 	  </div>
       </div>
 	
@@ -230,4 +234,9 @@ DLDL is more amenable to small datasets or sparse labels than C-ConvNet and R-Co
         $("#zoom_"+i).elevateZoom();
     }
 </script>
+<div style="clear: both;">
+<div class="smallsection">
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=mkRsEk2DMZww4jdaEDpmxqUmCYx9HG1gYNf3B5OZiaM&cl=ffffff&w=a"></script>
+</div>
+</div>
 </body></html>
