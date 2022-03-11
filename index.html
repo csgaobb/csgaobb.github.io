@@ -138,20 +138,20 @@ I am a computer vision researcher at <a href="https://bestimage.qq.com/"> Tencen
 <div class="section">
 <h2 id="confpapers">Arxiv papers</h2>
 
-<div class="paper" id="SCNet">
+<div class="paper" id="APANet">
 <img class="paper" 
-src="./Imgs_files/SCNet.png" 
-title="SCNet: Enhancing Few-Shot Semantic Segmentation by Self-Contrastive Background Prototypes">
+src="./Imgs_files/APANet.png" 
+title="APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation">
 <div> <strong>APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation</strong><br>
 <strong>Jiacheng Chen*, Bin-Bin Gao*</strong>, Zongqing Lu, Jing-Hao Xue, Chengjie Wang, Qingmin Liao<br>
-<i>arXiv:2104.09216. </i><br>
-[ <a href="https://arxiv.org/pdf/2104.09216.pdf">Paper</a>  ]
+<i>arXiv:2111.12263. </i><br>
+[ <a href="https://arxiv.org/pdf/2111.12263.pdf">Paper</a>  ]
 <!--[ <a href="https://">Code</a> ]-->
-[ <a href="javascript:toggleabs('SCNet')">Abstrcat</a> ]
+[ <a href="javascript:toggleabs('APANet')">Abstrcat</a> ]
 <preabs style="display: none;">
-Few-shot semantic segmentation aims to segment novel-class objects in a query image with only a few annotated examples in support images. Most of advanced solutions exploit a metric learning framework that performs segmentation through matching each pixel to a learned foreground prototype. However, this framework suffers from biased classification due to incomplete construction of sample pairs with the foreground prototype only. To address this issue, in this paper, we introduce a complementary self-contrastive task into few-shot semantic segmentation. Our new model is able to associate the pixels in a region with the prototype of this region, no matter they are in the foreground or background. To this end, we generate self-contrastive background prototypes directly from the query image, with which we enable the construction of complete sample pairs and thus a complementary and auxiliary segmentation task to achieve the training of a better segmentation model. Extensive experiments on PASCAL-5 and COCO-20 demonstrate clearly the superiority of our proposal. At no expense of inference efficiency, our model achieves state-of-the results in both 1-shot and 5-shot settings for few-shot semantic segmentation.
+Few-shot semantic segmentation aims to segment novel-class objects in a given query image with only a few labeled support images. Most advanced solutions exploit a metric learning framework that performs segmentation through matching each query feature to a learned class-specific prototype. However, this framework suffers from biased classification due to incomplete feature comparisons. To address this issue, we present an adaptive prototype representation by introducing class-specific and class-agnostic prototypes and thus construct complete sample pairs for learning semantic alignment with query features. The complementary features learning manner effectively enriches feature comparison and helps yield an unbiased segmentation model in the few-shot setting. It is implemented with a two-branch end-to-end network (\ie, a class-specific branch and a class-agnostic branch), which generates prototypes and then combines query features to perform comparisons. In addition, the proposed class-agnostic branch is simple yet effective. In practice, it can adaptively generate multiple class-agnostic prototypes for query images and learn feature alignment in a self-contrastive manner. Extensive experiments on PASCAL-5i and COCO-20i demonstrate the superiority of our method. At no expense of inference efficiency, our model achieves state-of-the-art results in both 1-shot and 5-shot settings for semantic segmentation.
 </preabs>
-[ <a href="javascript:togglebib('SCNet')">BibTeX</a> ]
+[ <a href="javascript:togglebib('APANet')">BibTeX</a> ]
 <pre style="display: none;">@article{}
 </pre>
 <br>
@@ -773,7 +773,11 @@ Twin support vector machine~(TSVM) is a powerful learning algorithm by solving a
 <p><font size="5">Conference Reviewer or PC Member:
 <li>
 <a href="https://iclr.cc/Conferences/2022">ICLR 2022</a>,
-<a href="http://wacv2022.thecvf.com">WACV 2022</a>
+<a href="http://wacv2022.thecvf.com">WACV 2022</a>,
+<a href="https://aaai.org/Conferences/AAAI-22/">AAAI 2022</a>,
+<a href="http://cvpr2022.thecvf.com/">CVPR 2022</a>,
+<a href="https://ijcai-22.org/">IJCAI-22</a>
+
 </li>
 <li>
 <a href="http://wacv2021.thecvf.com">WACV 2021</a>,
@@ -813,6 +817,8 @@ Twin support vector machine~(TSVM) is a powerful learning algorithm by solving a
 <li><a href="https://mc.manuscriptcentral.com/tii">IEEE Transactions on Industrial Informatics (TII)</a></li>
 <li><a href="https://mc.manuscriptcentral.com/tkde-cs">IEEE Transactions on Knowledge and Data Engineering (TKDE)</a></li>
 <li><a href="https://www.journals.elsevier.com/neurocomputing">Neurocomputing</a></li>
+<li><a href="https://www.editorialmanager.com/RTIP">Journal of Real-Time Image Processing (JRTIP)</a></li>
+<li><a href="https://mc.manuscriptcentral.com/tmi-ieee">IEEE Transactions on Medical Imaging (TMI)</a></li>
 <!--<li><a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221036">IEEE Transactions on Cybernetics (TCYB)</a></li>-->
 </font></p>
 </ul>
