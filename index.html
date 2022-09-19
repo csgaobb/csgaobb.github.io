@@ -144,6 +144,7 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
 </div>
 </div>
 
+<!--
 <div style="clear: both;">
 <div class="section">
 <h2 id="confpapers">Arxiv papers</h2>
@@ -157,7 +158,6 @@ title="Learning Expectation of Label Distribution for Facial Age and Attractiven
 <strong>Bin-Bin Gao</strong>, Xin-Xin Liu,Hong-Yu Zhou,Jianxin Wu,Xin Geng<br>
 <i>arXiv:2007.01771, 2020. </i><br>
 [ <a href="https://arxiv.org/pdf/2007.01771.pdf">Paper</a>  ]
-<!--[ <a href="https://">Code</a> ]-->
 [ <a href="javascript:toggleabs('DLDLv2-journal')">Abstrcat</a> ]
 <preabs style="display: none;">
 Facial attributes (e.g., age and attractiveness) estimation performance has been greatly improved by using convolutional neural networks. However, existing methods have an inconsistency between the training objectives and the evaluation metric, so they may be suboptimal. In addition, these methods always adopt image classification or face recognition models with a large amount of parameters, which carry expensive computation cost and storage overhead. In this paper, we firstly analyze the essential relationship between two state-of-the-art methods (Ranking-CNN and DLDL) and show that the Ranking method is in fact learning label distribution implicitly. This result thus firstly unifies two existing popular state-of-the-art methods into the DLDL framework. Second, in order to alleviate the inconsistency and reduce resource consumption, we design a lightweight network architecture and propose a unified framework which can jointly learn facial attribute distribution and regress attribute value. The effectiveness of our approach has been demonstrated on both facial age and attractiveness estimation tasks. Our method achieves new state-of-the-art results using the single model with 36×(6×) fewer parameters and 2.6×(2.1×) faster inference speed on facial age (attractiveness) estimation. Moreover, our method can achieve comparable results as the state-of-the-art even though the number of parameters is further reduced to 0.9M (3.8MB disk storage).
@@ -169,6 +169,7 @@ Facial attributes (e.g., age and attractiveness) estimation performance has been
 </div>
 <div class="spanner"></div>
 </div>
+
 
 <div class="paper" id="DSP">
 <img class="paper" 
@@ -215,6 +216,7 @@ datasets. For example, DSP’s accuracy on SUN397 is
 <div class="spanner"></div>
 </div>
 </div>
+-->
 
 <!--<div style="clear: both;">-->
 <div class="section">
@@ -229,7 +231,6 @@ title="APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segme
 <strong>Jiacheng Chen*, Bin-Bin Gao*</strong>, Zongqing Lu, Jing-Hao Xue, Chengjie Wang, Qingmin Liao<br>
 <i>IEEE Transactions on Multimedia</i>(<strong>TMM 2022</strong>), 2022. (Accepted, in press)<br>
 [ <a href="https://ieeexplore.ieee.org/document/9773019">Paper</a>  ]
-<!--[ <a href="https://">Code</a> ]-->
 [ <a href="javascript:toggleabs('APANet')">Abstrcat</a> ]
 <preabs style="display: none;">
 Few-shot semantic segmentation aims to segment novel-class objects in a given query image with only a few labeled support images. Most advanced solutions exploit a metric learning framework that performs segmentation through matching each query feature to a learned class-specific prototype. However, this framework suffers from biased classification due to incomplete feature comparisons. To address this issue, we present an adaptive prototype representation by introducing class-specific and class-agnostic prototypes and thus construct complete sample pairs for learning semantic alignment with query features. The complementary features learning manner effectively enriches feature comparison and helps yield an unbiased segmentation model in the few-shot setting. It is implemented with a two-branch end-to-end network (\ie, a class-specific branch and a class-agnostic branch), which generates prototypes and then combines query features to perform comparisons. In addition, the proposed class-agnostic branch is simple yet effective. In practice, it can adaptively generate multiple class-agnostic prototypes for query images and learn feature alignment in a self-contrastive manner. Extensive experiments on PASCAL-5i and COCO-20i demonstrate the superiority of our method. At no expense of inference efficiency, our model achieves state-of-the-art results in both 1-shot and 5-shot settings for semantic segmentation.
@@ -249,6 +250,46 @@ Few-shot semantic segmentation aims to segment novel-class objects in a given qu
 </div>
 <div class="spanner"></div>
 </div>
+
+<div class="paper" id="IJCNN2021"><img class="paper" 
+  src="./Imgs_files/C2F-Inst.png"
+  title="A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation">
+  <div> <strong>A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation</strong>
+  <br>Feng Luo, <strong>Bin-Bin Gao</strong>, Jiangpeng Yan, Xiu Li<br>
+  <i>In: Proceedings of International Joint Conference on Neural Networks (<strong>IJCNN 2021</strong>), Shenzhen, China, July 18-22, 2021, pp.1-8. </i><br>
+  [ <a href="https://ieeexplore.ieee.org/abstract/document/9533399">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('IJCNN2021')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    Boundary-based instance segmentation has drawn
+    much attention since of its attractive efficiency. However, existing
+    methods suffer from the difficulty in long-distance regression.
+    In this paper, we propose a coarse-to-fine module to address
+    the problem. Approximate boundary points are generated at the
+    coarse stage and then features of these points are sampled and
+    fed to a refined regressor for fine prediction. It is end-to-end
+    trainable since differential sampling operation is well supported
+    in the module. Furthermore, we design a holistic boundary-aware
+    branch and introduce instance-agnostic supervision to assist
+    regression. Equipped with ResNet-101, our approach achieves
+    31.7% mask AP on COCO dataset with single-scale training and
+    testing, outperforming the baseline 1.3% mask AP with less than
+    1% additional parameters and GFLOPs. Experiments also show
+    that our proposed method achieves competitive performance
+    compared to existing boundary-based methods with a lightweight design and a simple pipeline.
+  </preabs>      
+  [ <a href="javascript:togglebib('IJCNN2021')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{luo2021coarse,
+    title={A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation},
+    author={Luo, Feng and Gao, Bin-Bin and Yan, Jiangpeng and Li, Xiu},
+    booktitle={International Joint Conference on Neural Networks (IJCNN)},
+    pages={1--8},
+    year={2021}
+  }  
+  </pre>
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
 
 
 <div class="paper" id="MCAR">
