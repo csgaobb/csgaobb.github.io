@@ -100,7 +100,7 @@
 
 <div style="text-align:justify;">
 <div class="paper" >
-I am a computer vision researcher at <a href="https://bestimage.qq.com/"> Tencent YouTu</a> in Shenzhen.<!--, led by Prof. <a href="http://jiaya.me/">Jiaya Jia</a> (IEEE Fellow)--> 
+I am a computer vision researcher at <a href="https://bestimage.qq.com/"> Tencent YouTu Lab</a> in Shenzhen.<!--, led by Prof. <a href="http://jiaya.me/">Jiaya Jia</a> (IEEE Fellow)--> 
 Previously, I received my Ph.D. in <a href="http://www.nju.edu.cn/">Nanjing University</a> at <a href="http://www.lamda.nju.edu.cn/">LAMDA Group</a>, 
 led by Prof. <a href="https://cs.nju.edu.cn/zhouzh/" target="_blank"> Zhi-Hua Zhou</a> (foreign member of the Academy of Europe, ACM/AAAI/AAAS/IEEE/IAPR Fellow), 
 advised by Prof. <a href="http://cs.nju.edu.cn/wujx">Jianxin Wu</a> (member of the Thousand Talents Plan). 
@@ -132,7 +132,7 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
     <li> May 21, 2018, I defended my Ph.D. thesis.
     <li> Apr. 17, 2018: A paper is accepted by <a href="https://www.ijcai-18.org/">IJCAI 2018</a> (Acceptance Rates: 710/3470=20.46%).
     <li> Mar. 28, 2018: A paper (in Chinese) is accepted by <a href="http://engine.scichina.com/publisher/scp/journal/Sci%20Sin%20Info%20F?slug=Overview">SCIENTIA SINICA Informatics</a>. 
-    <li> Jul. 31, 2017：A paper accepted to <a href="http://iccv2017.thecvf.com/">ICCV 2017</a>.
+    <li> Jul. 31, 2017: A paper accepted to <a href="http://iccv2017.thecvf.com/">ICCV 2017</a>.
     <li> Mar. 26, 2017: A journal paper on deep label distribution learning is accepted by <a href="http://signalprocessingsociety.org/publications-resources/ieee-transactions-image-processing"> IEEE Trans. Image Processing</a>.</li>
     <li> Dec. 11-17, 2015: Attended <a href="http://pamitc.org/iccv15/"> ICCV 2015</a>.</li>
     <li> Nov. 13, 2015: A paper accepted for <a href="http://aaai.org/"> AAAI 2016</a>. </li>
@@ -233,7 +233,17 @@ title="APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segme
 [ <a href="https://ieeexplore.ieee.org/document/9773019">Paper</a>  ]
 [ <a href="javascript:toggleabs('APANet')">Abstrcat</a> ]
 <preabs style="display: none;">
-Few-shot semantic segmentation aims to segment novel-class objects in a given query image with only a few labeled support images. Most advanced solutions exploit a metric learning framework that performs segmentation through matching each query feature to a learned class-specific prototype. However, this framework suffers from biased classification due to incomplete feature comparisons. To address this issue, we present an adaptive prototype representation by introducing class-specific and class-agnostic prototypes and thus construct complete sample pairs for learning semantic alignment with query features. The complementary features learning manner effectively enriches feature comparison and helps yield an unbiased segmentation model in the few-shot setting. It is implemented with a two-branch end-to-end network (\ie, a class-specific branch and a class-agnostic branch), which generates prototypes and then combines query features to perform comparisons. In addition, the proposed class-agnostic branch is simple yet effective. In practice, it can adaptively generate multiple class-agnostic prototypes for query images and learn feature alignment in a self-contrastive manner. Extensive experiments on PASCAL-5i and COCO-20i demonstrate the superiority of our method. At no expense of inference efficiency, our model achieves state-of-the-art results in both 1-shot and 5-shot settings for semantic segmentation.
+Few-shot semantic segmentation aims to segment novel-class objects in a given query image with only a few labeled support images. 
+Most advanced solutions exploit a metric learning framework that performs segmentation through matching each query feature to a 
+learned class-specific prototype. However, this framework suffers from biased classification due to incomplete feature comparisons. 
+To address this issue, we present an adaptive prototype representation by introducing class-specific and class-agnostic prototypes 
+and thus construct complete sample pairs for learning semantic alignment with query features. The complementary features learning 
+manner effectively enriches feature comparison and helps yield an unbiased segmentation model in the few-shot setting. It is 
+implemented with a two-branch end-to-end network (\ie, a class-specific branch and a class-agnostic branch), which generates 
+prototypes and then combines query features to perform comparisons. In addition, the proposed class-agnostic branch is simple 
+yet effective. In practice, it can adaptively generate multiple class-agnostic prototypes for query images and learn feature 
+alignment in a self-contrastive manner. Extensive experiments on PASCAL-5i and COCO-20i demonstrate the superiority of our method. 
+At no expense of inference efficiency, our model achieves state-of-the-art results in both 1-shot and 5-shot settings for semantic segmentation.
 </preabs>
 [ <a href="javascript:togglebib('APANet')">BibTeX</a> ]
 <pre style="display: none;">@ARTICLE{APANet_TMM_2022,
@@ -255,7 +265,7 @@ Few-shot semantic segmentation aims to segment novel-class objects in a given qu
   src="./Imgs_files/C2F-Inst.png"
   title="A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation">
   <div> <strong>A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation</strong>
-  <br>Feng Luo, <strong>Bin-Bin Gao</strong>, Jiangpeng Yan, Xiu Li<br>
+  <br>Feng Luo, <strong>Bin-Bin Gao</strong>, Jiangpeng Yan and Xiu Li<br>
   <i>In: Proceedings of International Joint Conference on Neural Networks (<strong>IJCNN 2021</strong>), Shenzhen, China, July 18-22, 2021, pp.1-8. </i><br>
   [ <a href="https://ieeexplore.ieee.org/abstract/document/9533399">Paper</a>  ] 
   [ <a href="javascript:toggleabs('IJCNN2021')">Abstrcat</a> ]
@@ -303,11 +313,22 @@ title="Learning to Discover Multi-Class Attentional Regions for Multi-Label Imag
 [ <a href="https://github.com/gaobb/MCAR">Code</a> ]
 [ <a href="javascript:toggleabs('MCAR')">Abstrcat</a> ]
 <preabs style="display: none;">
-Multi-label image recognition is a practical and challenging task compared to single-label image classification. However, previous works may be suboptimal because of a great number of object proposals or complex attentional region generation modules. In this paper, we propose a simple but efficient two-stream framework to recognize multi-category objects from global image to local regions, similar to how human beings perceive objects. To bridge the gap between global and local streams, we propose a multi-class attentional region module which aims to make the number of attentional regions as small as possible and keep the diversity of these regions as high as possible. Our method can efficiently and effectively recognize multi-class objects with an affordable computation cost and a parameter-free region localization module. Over three benchmarks on multi-label image classification, we create new state-of-the-art results with a single model only using image semantics without label dependency. In addition, the effectiveness of the proposed method is extensively demonstrated under different factors such as global pooling strategy, input size and network architecture. Code has been made available at~\url{https://github.com/gaobb/MCAR}. 
+Multi-label image recognition is a practical and challenging task compared to single-label image classification.
+However, previous works may be suboptimal because of a great number of object proposals or complex attentional 
+region generation modules. In this paper, we propose a simple but efficient two-stream framework to recognize
+multi-category objects from global image to local regions, similar to how human beings perceive objects. 
+To bridge the gap between global and local streams, we propose a multi-class attentional region module which 
+aims to make the number of attentional regions as small as possible and keep the diversity of these regions as 
+high as possible. Our method can efficiently and effectively recognize multi-class objects with an affordable 
+computation cost and a parameter-free region localization module. Over three benchmarks on multi-label image 
+classification, we create new state-of-the-art results with a single model only using image semantics without 
+label dependency. In addition, the effectiveness of the proposed method is extensively demonstrated under different 
+factors such as global pooling strategy, input size and network architecture.
+Code has been made available at~\url{https://github.com/gaobb/MCAR}. 
 </preabs>
 [ <a href="javascript:togglebib('MCAR')">BibTeX</a> ]
 <pre style="display: none;">@ARTICLE{MCAR_TIP_2021,
-         author = {Bin-Bin Gao, Hong-Yu Zhou},
+         author = {Bin-Bin Gao and Hong-Yu Zhou},
          title = {{Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition}},
          booktitle = {IEEE Transactions on Image Processing (TIP)},
          year={2021},
@@ -333,7 +354,16 @@ title="Age Estimation Using Expectation of Label Distribution Learning">
 [ <a href="./Projects/DLDL-v2.html">Project Page</a>  ]
 [ <a href="javascript:toggleabs('IJCAI2018')">Abstrcat</a> ]
 <preabs style="display: none;">
-Age estimation performance has been greatly improved by using convolutional neural network. However, existing methods have an inconsistency between the training objectives and evaluation metric, so they may be suboptimal. In addition, these methods always adopt image classification or face recognition models with a large amount of parameters which bring expensive computation cost and storage overhead. To alleviate these issues, we design a light network architecture and propose a unified framework which can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions.
+Age estimation performance has been greatly improved by using convolutional neural network. 
+However, existing methods have an inconsistency between the training objectives and evaluation metric, 
+so they may be suboptimal. In addition, these methods always adopt image classification or face recognition 
+models with a large amount of parameters which bring expensive computation cost and storage overhead. 
+To alleviate these issues, we design a light network architecture and propose a unified framework which 
+can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated 
+on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single
+model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method 
+can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 
+0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions.
 </preabs>      
 [ <a href="javascript:togglebib('IJCAI2018')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{gaoDLDLv2,
@@ -396,12 +426,21 @@ src="./Imgs_files/1AF_ICCV2017.png"
 title="Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors">
 <div> <strong>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</strong><br>
 Hong-Yu Zhou, <strong>Bin-Bin Gao</strong> and Jianxin Wu <br>
-<i>In: In: Proceedings of the IEEE International Conference on Computer Vision </i>(<strong>ICCV 2017</strong>), Venice, Italy, October 2017, pp. 3505-3513.<br>
+<i>In: Proceedings of the IEEE International Conference on Computer Vision </i>(<strong>ICCV 2017</strong>), Venice, Italy, October 2017, pp. 3505-3513.<br>
 [ <a href="./Pub_files/AF_ICCV2017.pdf">Paper</a>  ] 
 [ <a href="https://funnyzhou.github.io/project/adaptive_feeding/">Project Page</a>  ]
 [ <a href="javascript:toggleabs('ICCV17')">Abstrcat</a> ]
 <preabs style="display: none;">
-Object detection aims at high speed and accuracy simultaneously. However, fast models are usually less accurate, while accurate models cannot satisfy our need for speed. A fast model can be 10 times faster but 50% less accurate than an accurate model. In this paper, we propose Adaptive Feeding (AF) to combine a fast (but less accurate) detector and an accurate (but slow) detector, by adaptively determining whether an image is easy or hard and choosing an appropriate detector for it. In practice, we build a cascade of detectors, including the AF classifier which make the easy vs. hard decision and the two detectors. The AF classifier can be tuned to obtain different tradeoff between speed and accuracy, which has negligible training time and requires no additional training data. Experimental results on the PASCAL VOC, MS COCO and Caltech Pedestrian datasets confirm that AF has the ability to achieve comparable speed as the fast detector and comparable accuracy as the accurate one at the same time. As an example, by combining the fast SSD300 with the accurate SSD500 detector, AF leads to 50% speedup over SSD500 with the same precision on the VOC2007 test set.
+Object detection aims at high speed and accuracy simultaneously. However, fast models are usually less accurate, 
+while accurate models cannot satisfy our need for speed. A fast model can be 10 times faster but 50% less accurate 
+than an accurate model. In this paper, we propose Adaptive Feeding (AF) to combine a fast (but less accurate) detector 
+and an accurate (but slow) detector, by adaptively determining whether an image is easy or hard and choosing an appropriate 
+detector for it. In practice, we build a cascade of detectors, including the AF classifier which make the easy vs. 
+hard decision and the two detectors. The AF classifier can be tuned to obtain different tradeoff between speed and accuracy, 
+which has negligible training time and requires no additional training data. Experimental results on the PASCAL VOC, MS COCO 
+and Caltech Pedestrian datasets confirm that AF has the ability to achieve comparable speed as the fast detector and comparable 
+accuracy as the accurate one at the same time. As an example, by combining the fast SSD300 with the accurate SSD500 detector, 
+AF leads to 50% speedup over SSD500 with the same precision on the VOC2007 test set.
 </preabs>      
 [ <a href="javascript:togglebib('ICCV17')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{zhou2017adaptive,
@@ -425,12 +464,20 @@ src="./Imgs_files/BMVC2017_SoS.png"
 title="Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition">
 <div> <strong>Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition</strong><br>
 Hong-Yu Zhou, <strong>Bin-Bin Gao</strong> and Jianxin Wu <br>
-<i>In:In: Proceedings of the 28th British Machine Vision Conference </i>(<strong>BMVC 2017</strong>), London, UK, September 2017.<br>
+<i>In: Proceedings of the 28th British Machine Vision Conference </i>(<strong>BMVC 2017</strong>), London, UK, September 2017.<br>
 [ <a href="./Pub_files/BMVC2017_SoS.pdf">Paper</a>  ] 
 [ <a href="https://funnyzhou.github.io/project/sos/">Project Page</a>  ]
 [ <a href="javascript:toggleabs('BMVC17')">Abstrcat</a> ]
 <preabs style="display: none;">
-The difficulty of image recognition has gradually increased from general category recognition to fine-grained recognition and to the recognition of some subtle attributes such as temperature and geolocation. In this paper, we try to focus on the classification between sunrise and sunset and hope to give a hint about how to tell the difference in subtle attributes. Sunrise vs. sunset is a difficult recognition task, which is challenging even for humans. Towards understanding this new problem, we first collect a new dataset made up of over one hundred webcams from different places. Since existing algorithmic methods have poor accuracy, we propose a new pairwise learning strategy to learn features from selective pairs of images. Experiments show that our approach surpasses baseline methods by a large margin and achieves better results even compared with humans. We also apply our approach to existing subtle attribute recognition problems, such as temperature estimation, and achieve state-of-the-art results.
+The difficulty of image recognition has gradually increased from general category recognition to fine-grained recognition 
+and to the recognition of some subtle attributes such as temperature and geolocation. In this paper, we try to focus on 
+the classification between sunrise and sunset and hope to give a hint about how to tell the difference in subtle attributes. 
+Sunrise vs. sunset is a difficult recognition task, which is challenging even for humans. Towards understanding this new 
+problem, we first collect a new dataset made up of over one hundred webcams from different places. Since existing algorithmic 
+methods have poor accuracy, we propose a new pairwise learning strategy to learn features from selective pairs of images. 
+Experiments show that our approach surpasses baseline methods by a large margin and achieves better results even compared with humans. 
+We also apply our approach to existing subtle attribute recognition problems, such as temperature estimation, and 
+achieve state-of-the-art results.
 </preabs>      
 [ <a href="javascript:togglebib('BMVC17')">BibTeX</a> ]
 <pre style="display: none;">@inproceedings{zhou2017sunrise,
@@ -457,7 +504,17 @@ title="Deep Label Distribution Learning with Label Ambiguity ">
 [ <a href="./Projects/DLDL.html">Project Page</a>  ]
 [ <a href="javascript:toggleabs('TIP17')">Abstrcat</a> ]
 <preabs style="display: none;">
-Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks different from traditional classification. Based on this observation, we convert the label of each image into a discrete label distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label classification and semantic segmentation tasks.
+Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. 
+A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient 
+training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label 
+classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks 
+different from traditional classification. Based on this observation, we convert the label of each image into a discrete label 
+distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth 
+label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the 
+label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the 
+training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art 
+methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label 
+classification and semantic segmentation tasks.
 </preabs>      
 [ <a href="javascript:togglebib('TIP17')">BibTeX</a> ]
 <pre style="display: none;">@ARTICLE{gao2016deep,
