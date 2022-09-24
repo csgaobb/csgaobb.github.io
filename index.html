@@ -225,6 +225,44 @@ datasets. For example, DSP’s accuracy on SUN397 is
 <h2 id="confpapers">Publications 
 [<a href="http://scholar.google.com/citations?user=yYviZ-oAAAAJ&hl=en">Google Scholar</a>]</h2>
 
+<div class="paper" id="NeurIPS2022"><img class="paper" 
+  src="./Imgs_files/DC-FSIS.png"
+  title="Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation">
+  <div> <strong>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</strong>
+  <br><strong>Bin-Bin Gao</strong>, Xiaochen Chen, Zhongyi Huang, Congchong Nie, Jun Liu, Jinxiang Lai, Guannan Jiang, Xi Wang and Chengjie Wang<br>
+  <i>In: Thirty-sixth Conference on Neural Information Processing Systems (<strong>NeurIPS 2022</strong>), New Orleans, USA, from Nov 29th to Dec 1st, 2022. </i><br>
+  [ <a href="https://nips.cc/virtual/2022/poster/55372">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('NeurIPS2022')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which
+    requires a model to quickly adapt to novel classes with a few labeled instances. The existing
+    methods severely suffer from bias classification because of the missing label issue which naturally
+    exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that
+    the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate
+    the bias classification. Therefore, we propose an embarrassingly simple but effective method
+    that decouples the standard classifier into two heads. Then, these two individual heads are
+    capable of independently addressing clear positive samples and noisy negative samples which
+    are caused by the missing label. In this way, the model can effectively learn novel classes
+    while mitigating the effects of noisy negative samples. Without bells and whistles, our model
+    without any additional computation cost and parameters consistently outperforms its baseline
+    and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.
+    The code will be available.
+  </preabs>      
+  [ <a href="javascript:togglebib('NeurIPS2022')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{gao2022dc,
+    title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
+    author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
+    booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
+    pages={--},
+    year={2022}
+  }  
+  </pre>
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+
 <div class="paper" id="APANet">
 <img class="paper" 
 src="./Imgs_files/APANet.png" 
@@ -1001,11 +1039,9 @@ Twin support vector machine~(TSVM) is a powerful learning algorithm by solving a
 <!--</div>
 </div>-->
 
-<div style="clear:both;">
-<!--<p align="right"><font size="2"><a href="http://lamda.nju.edu.cn/gaobb">Updated on Jun.  6, 2017.</a></font></p>-->
-<p align="right"><font size="2"><a href="http://lamda.nju.edu.cn/gaobb">Updated on Jun 20, 2021.</a></font></p>
-</div>
 
+
+<!--
 <hr>
 <div id="google_translate_element"></div>
 <script type="text/javascript">
@@ -1013,7 +1049,7 @@ function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
+-->
 
 <div style="clear: both;">
 <div class="smallsection">
@@ -1024,6 +1060,9 @@ function googleTranslateElementInit() {
 </div>
 </div>
 
+<div style="clear:both;">
+<p align="right"><font size="2"><a href="https://csgaobb.github.io/">Updated on Sep. 24, 2022.</a></font></p>
+</div>
 
 </body>
 </html>
