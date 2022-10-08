@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which requires a model to quickly adapt to novel classes with a few labeled instances. The existing methods severely suffer from bias classification because of the missing label issue which naturally exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate the bias classification. Therefore, we propose an embarrassingly simple but effective method that decouples the standard classifier into two heads. Then, these two individual heads are capable of independently addressing clear positive samples and noisy negative samples which are caused by the missing label. In this way, the model can effectively learn novel classes while mitigating the effects of noisy negative samples. Without bells and whistles, our model without any additional computation cost and parameters consistently outperforms its baseline and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.">
+<meta name="keywords" content="few-shot learning; object detection; instance segmentation; missing label.">
+<link rel="author" href="https://csgaobb.github.io/">
+
+<!-- Fonts and stuff -->
+<link href="./project_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./project_files/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./project_files/iconize.css">
+<script async="" src="./project_files/prettify.js"></script>
+<script src="./project_files/jquery-1.8.3.min.js" type="text/javascript" ></script> 
+<script src="./project_files/jquery.elevatezoom.js" type="text/javascript"></script> 
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div id="content">
+<div id="content-inner">
+<div class="section head">
+<h1>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</h1>
+
+	<div class="authors">
+	<a href="https://csgaobb.github.io/">Bin-Bin Gao<sup>1</sup>,</a>&nbsp;&nbsp;
+	<a href="">Xiaochen Chen<sup>1</sup>,</a>&nbsp;&nbsp;
+	<a href="">Zhongyi Huang<sup>1</sup>,</a>&nbsp;&nbsp;
+	<a href="">Congchong Nie<sup>1</sup>,</a>&nbsp;&nbsp;
+	<a href="">Jun Liu<sup>1</sup>,</a>&nbsp;&nbsp;
+	<br>
+	<a href="">Jinxiang Lai<sup>1</sup>,</a>&nbsp;&nbsp;
+	<a href="">Guannan Jiang<sup>2</sup>,</a>&nbsp;&nbsp;
+	<a href="">Xi Wang<sup>2</sup>,</a>&nbsp;&nbsp;
+	<a href="">Chengjie Wang<sup>1</sup></a>
+	</div>
+	<div class="affiliations">
+	<sup>1</sup>Tencent YouTu Lab,&nbsp;&nbsp; 
+	<sup>2</sup>CATL
+	</div>
+
+	<div class="venue"><a href=""> 36th Conference on Neural Information Processing Systems (NeurIPS 2022)</a> </div>
+	</div>
+	<center><img src="./DCFS_files/DCFS-MissingLabel.png" border="0" width="95%"></center>
+	<div class="section abstract" style="clear: both;text-align:justify; text-justify:inter-ideograph;">
+
+<h2>Abstract</h2><br>
+<p>
+This paper focus on few-shot object detection (FSOD) and instance segmentation (FSIS), which requires a 
+model to quickly adapt to novel classes with a few labeled instances. The existing methods severely suffer 
+from bias classification because of the missing label issue which naturally exists in a few-shot scenario and 
+is first formally proposed by us. Our analysis suggests that the standard classification head of most FSOD or 
+FSIS models needs to be decoupled to mitigate the bias classification. Therefore, we propose an embarrassingly 
+simple but effective method that decouples the standard classifier into two heads. Then, these two individual 
+heads are capable of independently addressing clear positive samples and noisy negative samples which are caused 
+by the missing label. In this way, the model can effectively learn novel classes while mitigating the effects of 
+noisy negative samples. Without bells and whistles, our model without any additional computation cost and parameters 
+consistently outperforms its baseline and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for 
+FSOD and FSIS tasks.
+</p>
+
+<div class="venue"> <font color="blue"> 
+<img src="./DLDL_files/update.gif" > 
+The code and pre-trained models are coming <a href="https://github.com/gaobb/DCFS">here </a>(10/08/2022)</font>. 
+</div>
+</div>
+</div>
+</div>
+
+<div id="content">
+<div id="content-inner">
+<div class="section results">
+<h2>Main Results</h2>
+<h3><font color="red">Task1:</font> Few-shot object detection</h3>
+<center><img  src="./DCFS_files/fsod.png" border="0" width="80%"></center>
+<center><img  src="./DCFS_files/gfsod.png" border="0" width="80%"></center>
+<h3><font color="red">Task2:</font> Few-shot instance segmentation</h3>
+<center><img  src="" border="0" width="95%"></center>
+<center><img  src="./DCFS_files/fsis.png" border="0" width="90%"></center>
+<center><img  src="./DCFS_files/gfsis.png" border="0" width="90%"></center>
+</div>
+</div>
+</div>
+
+
+<div id="content">
+<div id="content-inner">
+<div class="section results">
+<h2>Disscussion</h2>
+<h3>results visualization.</h3>
+Visualization results of our method and the strong baseline (Mask-DeFRCN) on MS-COCO validation images under the gFSIS setting with K=10. 
+<center><br><img id="zoom_0" src="./DCFS_files/DCFS-Vis.png" width="95%" hspace= 0"></a><br></center>
+<left>
+These bounding boxes and segmentation masks are visualized using scores larger than 0.6. The top two rows show 
+success cases with our method and the baseline while the middle two rows show success cases with our method but 
+partly failure ones with the baseline. The baseline may tend to incorrectly recognize positive object regions as 
+background due to the biased classification. The bottom row shows some failure cases from left to right, small 
+objects (e.g., the small boats and the person), coarse boundary segmentation (e.g., the surfer), occlusion 
+(e.g., two bears are detected to one), and misclassification of similar appearance objects 
+(e.g., the shadow of wine glass is recognized to wine glass and the train is detected to bus). 
+</left>
+<div style="text-align:left;">
+</div>
+
+<h3>Reduce bias classiﬁcation.</h3>
+The decoupling classiﬁer is helpful to mitigate the bias classiﬁcation thus boosting the FSOD and FSIS performance.
+<center><img  src="./DCFS_files/FSIS_COCO_Recall.png" border="0" width="45%">
+        <img  src="./DCFS_files/gFSIS_COCO_Recall.png" border="0" width="45%">
+</center>
+<left>
+	Comparison on mRecall and Recall of the proposed decoupling classiﬁer (DC) and standard 
+	classiﬁcation head (CE) under FSIS and gFSIS settings. The mean and standard deviation 
+	results are computed on all 10 seeds for each shot.
+</left>
+</div>
+</div>
+</div>
+
+
+<div id="content">
+<div id="content-inner">
+<div class="section list">
+	<h2>Citation</h2>
+	<div class="section bibtex">
+    <pre>@inproceedings{gao2022dc,
+	title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
+	author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
+	booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
+	pages={--},
+	year={2022}
+	}  
+</pre>
+</div>
+</div>
+	
+<div class="section contact">
+<h2>Contact</h2><br>
+	Please contact Bin-Bin Gao (<a href="mailto:csgaobb@gmail.com">email</a>) for questions about the paper.
+</div>
+</div>
+</div>
+
+<script>
+    for(var i=0;i<=12;i++){
+        $("#zoom_"+i).elevateZoom();
+    }
+</script>
+
+<div style="clear: both;">
+<div class="smallsection">
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=BFOUpKt8hoCCwvByCfZfxKUjKVc-qsbNP5whEb-yz7M&cl=ffffff&w=a"></script>
+</div>
+</div>
+</body></html>
