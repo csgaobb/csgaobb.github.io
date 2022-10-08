@@ -91,7 +91,7 @@ The code and pre-trained models are coming <a href="https://github.com/gaobb/DCF
 <h2>Disscussion</h2>
 <h3>results visualization.</h3>
 Visualization results of our method and the strong baseline (Mask-DeFRCN) on MS-COCO validation images under the gFSIS setting with K=10. 
-<center><br><img id="zoom_0" src="./DCFS_files/DCFS-Vis.png" width="95%" hspace= 0"></a><br></center>
+<center><br><img id="zoom_0" src="./DCFS_files/DCFS-Vis.png" width="85%" hspace= 0"></a><br></center>
 <left>
 These bounding boxes and segmentation masks are visualized using scores larger than 0.6. The top two rows show 
 success cases with our method and the baseline while the middle two rows show success cases with our method but 
@@ -107,8 +107,9 @@ objects (e.g., the small boats and the person), coarse boundary segmentation (e.
 <h3>Reduce bias classiﬁcation.</h3>
 The decoupling classiﬁer is helpful to mitigate the bias classiﬁcation thus boosting the FSOD and FSIS performance.
 <center>
-<iframe src="./DCFS_files/FSIS_COCO_Recall.pdf"  frameBorder="0" scrolling="auto" width="45%"></iframe>
-<iframe src="./DCFS_files/gFSIS_COCO_Recall.pdf" frameBorder="0" scrolling="auto" width="45%"></iframe>
+	
+<img src="./DCFS_files/FSIS_COCO_Recall.jpg"  width="45%">
+<img src="./DCFS_files/gFSIS_COCO_Recall.jpg" width="45%">
 </center>
 <left>
 	Comparison on mRecall and Recall of the proposed decoupling classiﬁer (DC) and standard 
