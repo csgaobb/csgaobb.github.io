@@ -102,7 +102,7 @@
 
 <div style="text-align:justify;">
 <div class="paper" >
-I am a computer vision researcher at <a href="https://bestimage.qq.com/"> Tencent YouTu Lab</a> in Shenzhen.<!--, led by Prof. <a href="http://jiaya.me/">Jiaya Jia</a> (IEEE Fellow)--> 
+I am a Senior Researcher at <a href="https://bestimage.qq.com/"> Tencent YouTu Lab</a> in Shenzhen.<!--, led by Prof. <a href="http://jiaya.me/">Jiaya Jia</a> (IEEE Fellow)--> 
 Previously, I received my Ph.D. in <a href="http://www.nju.edu.cn/">Nanjing University</a> at <a href="http://www.lamda.nju.edu.cn/">LAMDA Group</a>, 
 led by Prof. <a href="https://cs.nju.edu.cn/zhouzh/" target="_blank"> Zhi-Hua Zhou</a> (foreign member of the Academy of Europe, ACM/AAAI/AAAS/IEEE/IAPR Fellow), 
 advised by Prof. <a href="http://cs.nju.edu.cn/wujx">Jianxin Wu</a> (member of the Thousand Talents Plan). 
@@ -125,6 +125,7 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
   <h2>News</h2>
   <div class="paper">
     <ul>
+    <li> Nov. 23, 2023: A paper on cross-modal continual learning is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046"> IEEE Trans. Multimedia</a>.</li>
     <li> Feb. 24, 2023: A paper on few-shot image classification is accepted by <a href="https://ijcai-23.org/">IJCAI-2023</a>.</li>
     <li> Jan. 01, 2023: A paper on change detection is accepted by <a href=https://www.sciencedirect.com/journal/pattern-recognition"> Pattern Recognition</a>.</li>
     <li> Nov. 18, 2022: A paper on few-shot image classification is accepted by <a href="https://aaai.org/Conferences/AAAI-23/">AAAI 2023</a>.</li>
@@ -230,6 +231,51 @@ datasets. For example, DSP’s accuracy on SUN397 is
 [<a href="http://scholar.google.com/citations?user=yYviZ-oAAAAJ&hl=en">Google Scholar</a>]</h2>
 
 
+
+
+<div class="paper" id="TMM2023"><img class="paper" 
+  src="./Imgs_files/ALTA-PPL.png"
+  title="Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning">
+  <div> <strong>Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning</strong>
+  <br>Wujin Li, <strong>Bin-Bin Gao</strong>, Bizhong Xia, Jinbao Wang, Jun Liu, Yong Liu, Chengjie Wang and Feng Zheng<br>
+  <i> IEEE Transactions on Multimedia</i>(<strong>TMM 2023</strong>), 2023. (Accepted, in press)<br>
+  [ <a href="">Paper</a> ] 
+  [ <a href="javascript:toggleabs('TMM2023')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    Continual learning is a research field of artificial neural networks to simulate human lifelong learning ability. 
+    Although a surge of investigations has achieved considerable performance, most rely only on image modality for 
+    incremental image recognition tasks. In this paper, we propose a novel yet effective framework coined cross-modal 
+    Alternating Learning with Task-Aware representations (ALTA) to make good use of visual and linguistic modal 
+    information and achieve more effective continual learning. To do so, ALTA presents a cross-modal joint learning 
+    mechanism that leverages simultaneous learning of image and text representations to provide more effective supervision. 
+    And it mitigates forgetting by endowing task-aware representations with continual learning capability. Concurrently, 
+    considering the dilemma of stability and plasticity, ALTA proposes a cross-modal alternating learning strategy that 
+    alternately learns the task-aware cross-modal representations to match the image-text pairs between tasks better, 
+    further enhancing the ability of continual learning. We conduct extensive experiments under various popular image 
+    classification benchmarks to demonstrate that our approach achieves state-of-the-art performance. At the same time, 
+    systematic ablation studies and visualization analyses validate the effectiveness and rationality of our method. 
+    Our code will be available upon publication.
+  </preabs>      
+  [ <a href="javascript:togglebib('TMM2023')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{alta,
+    title={Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning},
+    author={Li, Wujin Li and Gao, Bin-Bin and Xia, Bizhong and Wang, Jinbao  and Liu, Jun and Liu, Yong and Wang, Chengjie and Zheng, Feng},
+    journal={IEEE Transactions on Multimedia (TMM 2023)},
+    volume={},
+    number={},
+    pages={},
+    doi={},
+    year={2023}
+  }  
+  </pre>
+  [ <a href="">Code</a> ]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+
+
 <div class="paper" id="PR2023"><img class="paper" 
   src="./Imgs_files/C-3PO.png"
   title="How to Reduce Change Detection to Semantic Segmentation">
@@ -322,7 +368,7 @@ src="./Imgs_files/APANet.png"
 title="APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation">
 <div> <strong>APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation</strong><br>
 <strong>Jiacheng Chen*, Bin-Bin Gao*</strong>, Zongqing Lu, Jing-Hao Xue, Chengjie Wang, Qingmin Liao<br>
-<i>IEEE Transactions on Multimedia</i>(<strong>TMM 2022</strong>), 2022. (Accepted, in press)<br>
+<i>IEEE Transactions on Multimedia</i>(<strong>TMM 2022</strong>), 2022.<br>
 [ <a href="https://ieeexplore.ieee.org/document/9773019">Paper</a>  ]
 [ <a href="javascript:toggleabs('APANet')">Abstrcat</a> ]
 <preabs style="display: none;">
@@ -344,9 +390,8 @@ At no expense of inference efficiency, our model achieves state-of-the-art resul
   journal={IEEE Transactions on Multimedia}, 
   title={APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation}, 
   year={2022},
-  volume={},
-  number={},
-  pages={1-1},
+  volume={25},
+  pages={4361-4373},
   doi={10.1109/TMM.2022.3174405}}
 </pre>
 <br>
@@ -1121,7 +1166,7 @@ function googleTranslateElementInit() {
 </div>
 
 <div style="clear:both;">
-<p align="right"><font size="2"><a href="https://csgaobb.github.io/">Updated on Aug. 2, 2023.</a></font></p>
+<p align="right"><font size="2"><a href="https://csgaobb.github.io/">Updated on Nov. 27, 2023.</a></font></p>
 </div>
 
 </body>
