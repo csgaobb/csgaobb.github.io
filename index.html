@@ -173,7 +173,7 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
   <h2>News</h2>
   <div class="paper">
     <ul>
-    <li> Feb. 27, 2024: 🎉🎉🎉 A paper on fully unsupervised anomaly detection is accepted by <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.</li>  
+    <li> Feb. 27, 2024: 🎉🎉🎉 A paper on fully unsupervised anomaly detection benchmark is accepted by <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.</li>  
     <li> Dec. 09, 2023: 🎉🎉🎉 Three papers on anomaly detection, continual detection and matched detection are accepted by <a href="https://aaai.org/Conferences/AAAI-24/">AAAI 2024</a>.</li>  
     <li> Nov. 23, 2023: 🎉🎉🎉 A paper on cross-modal continual learning is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046"> IEEE Trans. Multimedia</a>.</li>
     <li> Mar. 28, 2023: A paper on label distribution learning is accepted by <a href="https://www.editorialmanager.com/ncaa"> Neural Computing and Applications</a>.</li>
@@ -201,6 +201,453 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
   </div>
 </div>
 </div>
+
+
+<!--<div style="clear: both;">-->
+<div class="section">
+<h2 id="confpapers">Selected Publications 
+[<a href="http://scholar.google.com/citations?user=yYviZ-oAAAAJ&hl=en">Google Scholar</a>]</h2>
+
+
+
+<div class="paper" id="TMM2023"><img class="paper" 
+  src="./Imgs_files/ALTA-PPL.png"
+  title="Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning">
+  <div> <strong>Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning</strong> 
+  <br>Wujin Li*, <strong>Bin-Bin Gao*+</strong>, Bizhong Xia, Jinbao Wang, Jun Liu, Yong Liu, Chengjie Wang and Feng Zheng+<br>
+  <i> IEEE Transactions on Multimedia</i> (<strong>TMM 2023</strong>), 2023.<br>
+  [ <a href="">Paper</a> ] 
+  [ <a href="javascript:toggleabs('TMM2023')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    Continual learning is a research field of artificial neural networks to simulate human lifelong learning ability. 
+    Although a surge of investigations has achieved considerable performance, most rely only on image modality for 
+    incremental image recognition tasks. In this paper, we propose a novel yet effective framework coined cross-modal 
+    Alternating Learning with Task-Aware representations (ALTA) to make good use of visual and linguistic modal 
+    information and achieve more effective continual learning. To do so, ALTA presents a cross-modal joint learning 
+    mechanism that leverages simultaneous learning of image and text representations to provide more effective supervision. 
+    And it mitigates forgetting by endowing task-aware representations with continual learning capability. Concurrently, 
+    considering the dilemma of stability and plasticity, ALTA proposes a cross-modal alternating learning strategy that 
+    alternately learns the task-aware cross-modal representations to match the image-text pairs between tasks better, 
+    further enhancing the ability of continual learning. We conduct extensive experiments under various popular image 
+    classification benchmarks to demonstrate that our approach achieves state-of-the-art performance. At the same time, 
+    systematic ablation studies and visualization analyses validate the effectiveness and rationality of our method. 
+    Our code will be available upon publication.
+  </preabs>      
+  [ <a href="javascript:togglebib('TMM2023')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{alta,
+    title={Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning},
+    author={Li, Wujin Li and Gao, Bin-Bin and Xia, Bizhong and Wang, Jinbao  and Liu, Jun and Liu, Yong and Wang, Chengjie and Zheng, Feng},
+    journal={IEEE Transactions on Multimedia (TMM 2023)},
+    volume={},
+    number={},
+    pages={},
+    doi={},
+    year={2023}
+  }  
+  </pre>
+  [ <a href="https://github.com/vijaylee/ALTA">Code</a> ]
+  [SCI1, <a href="http://www.ccf.org.cn/xspj/jsjtxxydmt/">CCF-B</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+
+
+<div class="paper" id="PR2023"><img class="paper" 
+  src="./Imgs_files/C-3PO.png"
+  title="How to Reduce Change Detection to Semantic Segmentation">
+  <div> <strong>How to Reduce Change Detection to Semantic Segmentation</strong>
+  <br>Guo-Hua Wang, <strong>Bin-Bin Gao+</strong> and Chengjie Wang<br>
+  <i> Pattern Recognition</i> (<strong>PR 2023</strong>), 2023.<br>
+  [ <a href="https://arxiv.org/pdf/2206.07557.pdf">Paper</a> ] 
+  [ <a href="javascript:toggleabs('PR2023')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    Change detection (CD) aims to identify changes that occur in an image pair taken different times.
+    Prior methods devise specific networks from scratch to predict change masks in pixel-level, and 
+    struggle with general segmentation problems. In this paper, we propose a new paradigm that reduces 
+    CD to semantic segmentation which means tailoring an existing and powerful semantic segmentation 
+    network to solve CD. This new paradigm conveniently enjoys the mainstream semantic segmentation 
+    techniques to deal with general segmentation problems in CD. Hence we can concentrate on studying 
+    how to detect changes. We propose a novel and importance insight that different change types exist 
+    in CD and they should be learned separately. Based on it, we devise a module named MTF to extract 
+    the change information and fuse temporal features. MTF enjoys high interpretability and reveals the 
+    essential characteristic of CD. And most segmentation networks can be adapted to solve the CD problems 
+    with our MTF module. Finally, we propose C-3PO, a network to detect changes at pixel-level. C-3PO achieves 
+    state-of-the-art performance without bells and whistles. It is simple but effective and can be considered 
+    as a new baseline in this field. Our code will be available.
+  </preabs>      
+  [ <a href="javascript:togglebib('PR2023')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{wangc3po,
+    title={How to Reduce Change Detection to Semantic Segmentation},
+    author={Wang, Guo-Hua, and Gao, Bin-Bin and Wang, Chengjie},
+    journal={Pattern Recognition (PR 2023)},
+    volume={138},
+    number={},
+    pages={},
+    doi={https://doi.org/10.1016/j.patcog.2023.109384}},
+    year={2023}
+  }
+  </pre>
+  [ <a href="https://github.com/DoctorKey/C-3PO">Code</a> ]
+  [SCI1, <a href="http://www.ccf.org.cn/xspj/jsjtxxydmt/">CCF-B</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+<div class="paper" id="APANet">
+<img class="paper" 
+src="./Imgs_files/APANet.png" 
+title="APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation">
+<div> <strong>APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation</strong><br>
+Jiacheng Chen*, <strong>Bin-Bin Gao*+</strong>, Zongqing Lu+, Jing-Hao Xue, Chengjie Wang and Qingmin Liao<br>
+<i>IEEE Transactions on Multimedia</i> (<strong>TMM 2022</strong>),25:4361-4373, 2022.<br>
+[ <a href="https://ieeexplore.ieee.org/document/9773019">Paper</a>  ]
+[ <a href="javascript:toggleabs('APANet')">Abstrcat</a> ]
+<preabs style="display: none;">
+Few-shot semantic segmentation aims to segment novel-class objects in a given query image with only a few labeled support images. 
+Most advanced solutions exploit a metric learning framework that performs segmentation through matching each query feature to a 
+learned class-specific prototype. However, this framework suffers from biased classification due to incomplete feature comparisons. 
+To address this issue, we present an adaptive prototype representation by introducing class-specific and class-agnostic prototypes 
+and thus construct complete sample pairs for learning semantic alignment with query features. The complementary features learning 
+manner effectively enriches feature comparison and helps yield an unbiased segmentation model in the few-shot setting. It is 
+implemented with a two-branch end-to-end network (\ie, a class-specific branch and a class-agnostic branch), which generates 
+prototypes and then combines query features to perform comparisons. In addition, the proposed class-agnostic branch is simple 
+yet effective. In practice, it can adaptively generate multiple class-agnostic prototypes for query images and learn feature 
+alignment in a self-contrastive manner. Extensive experiments on PASCAL-5i and COCO-20i demonstrate the superiority of our method. 
+At no expense of inference efficiency, our model achieves state-of-the-art results in both 1-shot and 5-shot settings for semantic segmentation.
+</preabs>
+[ <a href="javascript:togglebib('APANet')">BibTeX</a> ]
+<pre style="display: none;">@ARTICLE{APANet_TMM_2022,
+  author={Chen, Jiacheng and Gao, Bin-Bin and Lu, Zongqing and Xue, Jing-Hao and Wang, Chengjie and Liao, Qingmin},
+  journal={IEEE Transactions on Multimedia}, 
+  title={APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation}, 
+  year={2022},
+  volume={25},
+  pages={4361-4373},
+  doi={10.1109/TMM.2022.3174405}}
+</pre>
+[SCI1, <a href="http://www.ccf.org.cn/xspj/jsjtxxydmt/">CCF-B</a>]
+<br>
+</div>
+<div class="spanner"></div>
+</div>
+
+<div class="paper" id="MCAR">
+<img class="paper" 
+src="./Imgs_files/MCAR.png" 
+title="Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition">
+<div> <strong>Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition</strong><br>
+<strong>Bin-Bin Gao+</strong> and Hong-Yu Zhou<br>
+<i>IEEE Transactions on Image Processing </i> (<strong>TIP 2021</strong>),20:5920-5932,2021.</i><br>
+[ <a href="https://ieeexplore.ieee.org/document/9466402">Paper</a>  ]
+[ <a href="javascript:toggleabs('MCAR')">Abstrcat</a> ]
+<preabs style="display: none;">
+Multi-label image recognition is a practical and challenging task compared to single-label image classification.
+However, previous works may be suboptimal because of a great number of object proposals or complex attentional 
+region generation modules. In this paper, we propose a simple but efficient two-stream framework to recognize
+multi-category objects from global image to local regions, similar to how human beings perceive objects. 
+To bridge the gap between global and local streams, we propose a multi-class attentional region module which 
+aims to make the number of attentional regions as small as possible and keep the diversity of these regions as 
+high as possible. Our method can efficiently and effectively recognize multi-class objects with an affordable 
+computation cost and a parameter-free region localization module. Over three benchmarks on multi-label image 
+classification, we create new state-of-the-art results with a single model only using image semantics without 
+label dependency. In addition, the effectiveness of the proposed method is extensively demonstrated under different 
+factors such as global pooling strategy, input size and network architecture.
+Code has been made available at~\url{https://github.com/gaobb/MCAR}. 
+</preabs>
+[ <a href="javascript:togglebib('MCAR')">BibTeX</a> ]
+<pre style="display: none;">@ARTICLE{MCAR_TIP_2021,
+         author = {Bin-Bin Gao and Hong-Yu Zhou},
+         title = {{Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition}},
+         booktitle = {IEEE Transactions on Image Processing (TIP)},
+         year={2021},
+         volume={30},
+         pages={5920-5932},
+}
+</pre>
+[ <a href="https://github.com/gaobb/MCAR">Code</a> ]
+[SCI1, <a href="http://www.ccf.org.cn/xspj/jsjtxxydmt/">CCF-A</a>]
+<br>
+</div>
+<div class="spanner"></div>
+</div>
+
+<div class="paper" id="TIP17">
+  <img class="paper" 
+  src="./Imgs_files/DLDL_LD.png" 
+  title="Deep Label Distribution Learning with Label Ambiguity ">
+  <div> <strong>Deep Label Distribution Learning with Label Ambiguity</strong><br>
+  <strong>Bin-Bin Gao</strong>, Chao Xing, Chen-Wei Xie, Jianxin Wu+ and Xin Geng <br>
+  <i>IEEE Transactions on Image Processing </i> (<strong>TIP 2017</strong>), 26(6):2825-2838,2017.<br>
+  [ <a href="./Pub_files/TIP2017_DLDL.pdf">Paper</a>  ] 
+  [ <a href="./Projects/DLDL.html">Project Page</a>  ]
+  [ <a href="javascript:toggleabs('TIP17')">Abstrcat</a> ]
+  <preabs style="display: none;">
+  Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. 
+  A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient 
+  training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label 
+  classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks 
+  different from traditional classification. Based on this observation, we convert the label of each image into a discrete label 
+  distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth 
+  label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the 
+  label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the 
+  training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art 
+  methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label 
+  classification and semantic segmentation tasks.
+  </preabs>      
+  [ <a href="javascript:togglebib('TIP17')">BibTeX</a> ]
+  <pre style="display: none;">@ARTICLE{gao2016deep,
+           author={Gao, Bin-Bin and Xing, Chao and Xie, Chen-Wei and Wu, Jianxin and Geng, Xin},
+           title={Deep Label Distribution Learning with Label Ambiguity},
+           journal={IEEE Transactions on Image Processing},
+           year={2017},
+           volume={26},
+           number={6},
+           pages={2825-2838}, 
+           }
+  </pre>
+  [<a href="https://github.com/gaobb/DLDL">Code</a> ]
+  [SCI1, <a href="http://www.ccf.org.cn/xspj/jsjtxxydmt/">CCF-A</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+<div class="paper" id="SSI2018">
+  <a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">
+  <img class="paper"
+    src="./Imgs_files/SSI2018.png"
+    title="Resource constrained deep learning: Challenges and Practices">
+  </a>
+  <div> <strong>Resource Constrained Deep Learning: Challenges and Practices (in Chinese)</strong><br>
+  Jianxin Wu+, <strong>Bin-Bin Gao</strong>, Xiu-Shen Wei and Jian-Hao Luo<br>
+  <i>SCIENTIA SINICA Informatics</i>, 48(5):501-510,2018.<br>
+  [ <a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('SSI2018')">Abstrcat</a> ]
+  <preabs style="display: none;">
+  Deep learning has made significant progresses in recent years. However, deep models require a lot of
+  computation-related resources, and its learning process needs huge number of data points and their labels. Hence,
+  one current research focus in deep learning is to reduce its resource consumptions, i.e., resource constrained deep
+  learning. In this paper, we first analyze deep learning’s thirsts for the various types of resources and the challenges
+  they lead to, then briefly introduce research progresses from three aspects: data, label and computation resources.
+  And we give detailed introductions of these areas using our research results as examples.
+  </preabs>      
+  [ <a href="javascript:togglebib('SSI2018')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{SSI2018,
+              title={Resource constrained deep learning: Challenges and practices},
+              author={Wu, Jianxin and Gao, Bin-Bin and Wei, Xiu-Shen and Luo, Jian-Hao},
+              journal={SCIENTIA SINICA Informatics},
+              volume={48},
+              number={5},
+              pages={501--510},
+              year={2018}
+              }
+  </pre>
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+    
+<div class="paper" id="AAAI2024">
+  <img class="paper" 
+  src="./Imgs_files/LTALIR-AAAI24" 
+  title="Learning Task-Aware Language-Image Representation for Class-Incremental Object Detection">
+  <div> <strong>Learning Task-Aware Language-Image Representation for Class-Incremental Object Detection</strong><br>
+  Hongquan Zhang*, <strong>Bin-Bin Gao*</strong>, Yi Zeng, Xudong Tian, Xin Tan, Zhizhong Zhang, Yanyun Qu, Jun Liu and Yuan Xie+<br>
+  <i>In: Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intelligence </i> (<strong>AAAI 2024</strong>), Vancouver, Canada, Feb 2024, pp.-.<br>
+  [ <a href="">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('AAAI2024')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    Class-incremental object detection (CIOD) is a real-world desired capability, requiring an object detector to continuously adapt to new tasks without forgetting learned ones, with the main challenge being catastrophic forgetting. Many methods based on distillation and replay have been proposed to alleviate this problem. However, they typically learn on a pure visual backbone, neglecting the powerful representation capabilities of textual cues, which to some extent limits their performance. 
+    In this paper, we propose task-aware language-image representation to mitigate catastrophic forgetting, introducing a new paradigm for language-image-based CIOD.
+    First of all, we demonstrate the significant advantage of language-image detectors in mitigating catastrophic forgetting. Secondly, we propose a learning task-aware language-image representation method that overcomes the existing drawback of directly utilizing the language-image
+    detector for CIOD. More specifically, we learn the language-image representation of different tasks through an insulating approach in the training stage, while using the alignment scores produced by task-specific language-image representation in the inference stage. 
+    Through our proposed method, language-image detectors can be more practical for CIOD. We conduct extensive experiments on COCO 2017 and Pascal VOC 2007 and demonstrate that the proposed method achieves state-of-the-art results under the various CIOD settings.    
+  </preabs>
+  [ <a href="javascript:togglebib('AAAI2024')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{wu2016representing,
+    title={Representing Sets of Instances for Visual Recognition.},
+    author={Zhang, Hongquan and Gao, Bin-Bin and Zeng, Yi and Tian, Xudong and Tan, Xin and Zhang, Zhizhong and Qu, Yanyun and Liu, Jun and Xie, Yuan},
+    booktitle={Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intelligence},
+    pages={--},
+    year={2024}
+  }
+  </pre>
+  [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+<div class="paper" id="NeurIPS2022"><img class="paper" 
+  src="./Imgs_files/DCFS.png"
+  title="Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation">
+  <div> <strong>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</strong>
+  <br><strong>Bin-Bin Gao+</strong>, Xiaochen Chen, Zhongyi Huang, Congchong Nie, Jun Liu, Jinxiang Lai, Guannan Jiang, Xi Wang and Chengjie Wang+<br>
+  <i>In: Thirty-sixth Conference on Neural Information Processing Systems</i> (<strong>NeurIPS 2022</strong>), New Orleans, USA, from Nov 29th to Dec 1st, 2022, pp.18640-18652.<br>
+  [ <a href="https://nips.cc/virtual/2022/poster/55372">Paper</a> ] 
+  [ <a href="https://csgaobb.github.io/Projects/DCFS">ProjectPage</a> ]
+  [ <a href="javascript:toggleabs('NeurIPS2022')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which
+    requires a model to quickly adapt to novel classes with a few labeled instances. The existing
+    methods severely suffer from bias classification because of the missing label issue which naturally
+    exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that
+    the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate
+    the bias classification. Therefore, we propose an embarrassingly simple but effective method
+    that decouples the standard classifier into two heads. Then, these two individual heads are
+    capable of independently addressing clear positive samples and noisy negative samples which
+    are caused by the missing label. In this way, the model can effectively learn novel classes
+    while mitigating the effects of noisy negative samples. Without bells and whistles, our model
+    without any additional computation cost and parameters consistently outperforms its baseline
+    and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.
+    The code will be available.
+  </preabs>      
+  [ <a href="javascript:togglebib('NeurIPS2022')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{gao2022dc,
+    title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
+    author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
+    booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
+    volume={35},
+    pages={18640--18652},
+    year={2022}
+  }  
+  </pre>
+  [ <a href="https://openreview.net/attachment?id=dVXO3Orjmxk&name=supplementary_material">[Supplementary Material]</a>]
+  [ <a href="https://nips.cc/media/neurips-2022/Slides/55372_kHEysnz.pdf">[Slides]</a>]
+  [ <a href="https://nips.cc/media/PosterPDFs/NeurIPS%202022/5b69b9cb83065d403869739ae7f0995e.png">[Poster]</a>]
+  [ <a href="https://csgaobb.github.io/Projects/mscoco-fsod.html">FSOD-Leaderboard</a> ]
+  [ <a href="https://github.com/gaobb/DCFS">Code</a> ]
+  [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+
+<div class="paper" id="IJCAI2018"><img class="paper" 
+src="./Imgs_files/DLDL-v2-fw.png"
+title="Age Estimation Using Expectation of Label Distribution Learning">
+<div> <strong>Age Estimation Using Expectation of Label Distribution Learning</strong><br>
+<strong>Bin-Bin Gao</strong>, Hong-Yu Zhou, Jianxin Wu+ and Xin Geng<br>
+<i>In: Proceedings of the 27th International Joint Conference on Artificial Intelligence</i> (<strong>IJCAI 2018</strong>), Stockholm, Sweden, July 2018, pp.712-718.<br>
+[ <a href="https://www.ijcai.org/proceedings/2018/0099.pdf">Paper</a>  ] 
+[ <a href="./Projects/DLDL-v2.html">Project Page</a>  ]
+[ <a href="javascript:toggleabs('IJCAI2018')">Abstrcat</a> ]
+<preabs style="display: none;">
+Age estimation performance has been greatly improved by using convolutional neural network. 
+However, existing methods have an inconsistency between the training objectives and evaluation metric, 
+so they may be suboptimal. In addition, these methods always adopt image classification or face recognition 
+models with a large amount of parameters which bring expensive computation cost and storage overhead. 
+To alleviate these issues, we design a light network architecture and propose a unified framework which 
+can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated 
+on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single
+model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method 
+can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 
+0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions.
+</preabs>      
+[ <a href="javascript:togglebib('IJCAI2018')">BibTeX</a> ]
+<pre style="display: none;">@inproceedings{gaoDLDLv2,
+           title={Age Estimation Using Expectation of Label Distribution Learning},
+           author={Gao, Bin-Bin and Zhou, Hong-Yu and Wu, Jianxin and Geng, Xin},
+           booktitle={Proceedings of the 27th International Joint Conference on Artificial Intelligence (<strong>IJCAI 2018</strong>)},
+           pages={712--718},
+           year={2018}
+            }
+
+</pre>
+[<a href="https://github.com/gaobb/DLDL-v2">Code</a>]
+[<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
+<br>
+</div>
+<div class="spanner"></div>
+</div>
+
+
+<div class="paper" id="AAAI2016">
+  <img class="paper" 
+  src="./Imgs_files/D3.png" 
+  title="Representing Sets of Instances for Visual Recognition">
+  <div> <strong>Representing Sets of Instances for Visual Recognition</strong><br>
+  Jianxin Wu+, <strong>Bin-Bin Gao</strong> and Guoqing Liu <br>
+  <i>In: Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence </i>(<strong>AAAI 2016</strong>), Phoenix, Arizona, USA, Feb 2016, pp.2237-2243.<br>
+  [ <a href="http://cs.nju.edu.cn/_upload/tpl/00/ed/237/template237/paper/AAAI2016_D3.pdf">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('AAAI2016')">Abstrcat</a> ]
+  <preabs style="display: none;">
+  In computer vision, a complex entity such as an image or
+  video is often represented as a set of instance vectors, which
+  are extracted from different parts of that entity. Thus, it is
+  essential to design a representation to encode information
+  in a set of instances robustly. Existing methods such as FV
+  and VLAD are designed based on a generative perspective,
+  and their performances fluctuate when difference types of instance
+  vectors are used (i.e., they are not robust). The proposed
+  D3 method effectively compares two sets as two distributions,
+  and proposes a directional total variation distance
+  (DTVD) to measure their dissimilarity. Furthermore, a robust
+  classifier-based method is proposed to estimate DTVD robustly,
+  and to efficiently represent these sets. D3 is evaluated
+  in action and image recognition tasks. It achieves excellent
+  robustness, accuracy and speed.
+  </preabs>
+  [ <a href="javascript:togglebib('AAAI2016')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{wu2016representing,
+    title={Representing Sets of Instances for Visual Recognition.},
+    author={Wu, Jianxin and Gao, Bin-Bin and Liu, Guoqing},
+    booktitle={Proceedings of the theritieth AAAI Conference on Artificial Intelligence},
+    pages={2237--2243},
+    year={2016}
+  }
+  </pre>
+  [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+<!--
+<div class="paper" id="IJCNN2021"><img class="paper" 
+  src="./Imgs_files/C2F-Inst.png"
+  title="A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation">
+  <div> <strong>A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation</strong>
+  <br>Feng Luo, <strong>Bin-Bin Gao+</strong>, Jiangpeng Yan and Xiu Li<br>
+  <i>In: Proceedings of International Joint Conference on Neural Networks (<strong>IJCNN 2021</strong>), Shenzhen, China, July 18-22, 2021, pp.1-8. </i><br>
+  [ <a href="https://ieeexplore.ieee.org/abstract/document/9533399">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('IJCNN2021')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    Boundary-based instance segmentation has drawn
+    much attention since of its attractive efficiency. However, existing
+    methods suffer from the difficulty in long-distance regression.
+    In this paper, we propose a coarse-to-fine module to address
+    the problem. Approximate boundary points are generated at the
+    coarse stage and then features of these points are sampled and
+    fed to a refined regressor for fine prediction. It is end-to-end
+    trainable since differential sampling operation is well supported
+    in the module. Furthermore, we design a holistic boundary-aware
+    branch and introduce instance-agnostic supervision to assist
+    regression. Equipped with ResNet-101, our approach achieves
+    31.7% mask AP on COCO dataset with single-scale training and
+    testing, outperforming the baseline 1.3% mask AP with less than
+    1% additional parameters and GFLOPs. Experiments also show
+    that our proposed method achieves competitive performance
+    compared to existing boundary-based methods with a lightweight design and a simple pipeline.
+  </preabs>      
+  [ <a href="javascript:togglebib('IJCNN2021')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{luo2021coarse,
+    title={A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation},
+    author={Luo, Feng and Gao, Bin-Bin and Yan, Jiangpeng and Li, Xiu},
+    booktitle={International Joint Conference on Neural Networks (IJCNN)},
+    pages={1--8},
+    year={2021}
+  }  
+  </pre>
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+-->
 
 <!--
 <div style="clear: both;">
@@ -276,346 +723,14 @@ datasets. For example, DSP’s accuracy on SUN397 is
 </div>
 -->
 
-<!--<div style="clear: both;">-->
-<div class="section">
-<h2 id="confpapers">Selected Publications 
-[<a href="http://scholar.google.com/citations?user=yYviZ-oAAAAJ&hl=en">Google Scholar</a>]</h2>
-
-
-
-
-<div class="paper" id="TMM2023"><img class="paper" 
-  src="./Imgs_files/ALTA-PPL.png"
-  title="Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning">
-  <div> <strong>Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning</strong> 
-  <br><strong>Wujin Li*</strong>, <strong>Bin-Bin Gao*</strong>, Bizhong Xia, Jinbao Wang, Jun Liu, Yong Liu, Chengjie Wang and Feng Zheng<br>
-  <i> IEEE Transactions on Multimedia</i>(<strong>TMM 2023</strong>), 2023. (Accepted, in press)<br>
-  [ <a href="">Paper</a> ] 
-  [ <a href="javascript:toggleabs('TMM2023')">Abstrcat</a> ]
-  <preabs style="display: none;">
-    Continual learning is a research field of artificial neural networks to simulate human lifelong learning ability. 
-    Although a surge of investigations has achieved considerable performance, most rely only on image modality for 
-    incremental image recognition tasks. In this paper, we propose a novel yet effective framework coined cross-modal 
-    Alternating Learning with Task-Aware representations (ALTA) to make good use of visual and linguistic modal 
-    information and achieve more effective continual learning. To do so, ALTA presents a cross-modal joint learning 
-    mechanism that leverages simultaneous learning of image and text representations to provide more effective supervision. 
-    And it mitigates forgetting by endowing task-aware representations with continual learning capability. Concurrently, 
-    considering the dilemma of stability and plasticity, ALTA proposes a cross-modal alternating learning strategy that 
-    alternately learns the task-aware cross-modal representations to match the image-text pairs between tasks better, 
-    further enhancing the ability of continual learning. We conduct extensive experiments under various popular image 
-    classification benchmarks to demonstrate that our approach achieves state-of-the-art performance. At the same time, 
-    systematic ablation studies and visualization analyses validate the effectiveness and rationality of our method. 
-    Our code will be available upon publication.
-  </preabs>      
-  [ <a href="javascript:togglebib('TMM2023')">BibTeX</a> ]
-  <pre style="display: none;">@inproceedings{alta,
-    title={Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning},
-    author={Li, Wujin Li and Gao, Bin-Bin and Xia, Bizhong and Wang, Jinbao  and Liu, Jun and Liu, Yong and Wang, Chengjie and Zheng, Feng},
-    journal={IEEE Transactions on Multimedia (TMM 2023)},
-    volume={},
-    number={},
-    pages={},
-    doi={},
-    year={2023}
-  }  
-  </pre>
-  [ <a href="https://github.com/vijaylee/ALTA">Code</a> ]
-  <br>
-  </div>
-  <div class="spanner"></div>
-  </div>
-
-
-
-<div class="paper" id="PR2023"><img class="paper" 
-  src="./Imgs_files/C-3PO.png"
-  title="How to Reduce Change Detection to Semantic Segmentation">
-  <div> <strong>How to Reduce Change Detection to Semantic Segmentation</strong>
-  <br>Guo-Hua Wang, <strong>Bin-Bin Gao</strong> and Chengjie Wang<br>
-  <i> Pattern Recognition (<strong>PR 2023</strong>),2023.</i><br>
-  [ <a href="https://arxiv.org/pdf/2206.07557.pdf">Paper</a> ] 
-  [ <a href="javascript:toggleabs('PR2023')">Abstrcat</a> ]
-  <preabs style="display: none;">
-    Change detection (CD) aims to identify changes that occur in an image pair taken different times.
-    Prior methods devise specific networks from scratch to predict change masks in pixel-level, and 
-    struggle with general segmentation problems. In this paper, we propose a new paradigm that reduces 
-    CD to semantic segmentation which means tailoring an existing and powerful semantic segmentation 
-    network to solve CD. This new paradigm conveniently enjoys the mainstream semantic segmentation 
-    techniques to deal with general segmentation problems in CD. Hence we can concentrate on studying 
-    how to detect changes. We propose a novel and importance insight that different change types exist 
-    in CD and they should be learned separately. Based on it, we devise a module named MTF to extract 
-    the change information and fuse temporal features. MTF enjoys high interpretability and reveals the 
-    essential characteristic of CD. And most segmentation networks can be adapted to solve the CD problems 
-    with our MTF module. Finally, we propose C-3PO, a network to detect changes at pixel-level. C-3PO achieves 
-    state-of-the-art performance without bells and whistles. It is simple but effective and can be considered 
-    as a new baseline in this field. Our code will be available.
-  </preabs>      
-  [ <a href="javascript:togglebib('PR2023')">BibTeX</a> ]
-  <pre style="display: none;">@inproceedings{wangc3po,
-    title={How to Reduce Change Detection to Semantic Segmentation},
-    author={Wang, Guo-Hua, and Gao, Bin-Bin and Wang, Chengjie},
-    journal={Pattern Recognition (PR 2023)},
-    volume={138},
-    number={},
-    pages={},
-    doi={https://doi.org/10.1016/j.patcog.2023.109384}},
-    year={2023}
-  }  
-  </pre>
-  [ <a href="https://github.com/DoctorKey/C-3PO">Code</a> ]
-  <br>
-  </div>
-  <div class="spanner"></div>
-  </div>
-
-<div class="paper" id="NeurIPS2022"><img class="paper" 
-  src="./Imgs_files/DCFS.png"
-  title="Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation">
-  <div> <strong>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</strong>
-  <br><strong>Bin-Bin Gao</strong>, Xiaochen Chen, Zhongyi Huang, Congchong Nie, Jun Liu, Jinxiang Lai, Guannan Jiang, Xi Wang and Chengjie Wang<br>
-  <i>In: Thirty-sixth Conference on Neural Information Processing Systems (<strong>NeurIPS 2022</strong>), New Orleans, USA, from Nov 29th to Dec 1st, 2022. </i><br>
-  [ <a href="https://nips.cc/virtual/2022/poster/55372">Paper</a> ] 
-  [ <a href="https://csgaobb.github.io/Projects/DCFS">ProjectPage</a> ]
-  [ <a href="javascript:toggleabs('NeurIPS2022')">Abstrcat</a> ]
-  <preabs style="display: none;">
-    This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which
-    requires a model to quickly adapt to novel classes with a few labeled instances. The existing
-    methods severely suffer from bias classification because of the missing label issue which naturally
-    exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that
-    the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate
-    the bias classification. Therefore, we propose an embarrassingly simple but effective method
-    that decouples the standard classifier into two heads. Then, these two individual heads are
-    capable of independently addressing clear positive samples and noisy negative samples which
-    are caused by the missing label. In this way, the model can effectively learn novel classes
-    while mitigating the effects of noisy negative samples. Without bells and whistles, our model
-    without any additional computation cost and parameters consistently outperforms its baseline
-    and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.
-    The code will be available.
-  </preabs>      
-  [ <a href="javascript:togglebib('NeurIPS2022')">BibTeX</a> ]
-  <pre style="display: none;">@inproceedings{gao2022dc,
-    title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
-    author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
-    booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
-    volume={35},
-    pages={18640--18652},
-    year={2022}
-  }  
-  </pre>
-  [ <a href="https://openreview.net/attachment?id=dVXO3Orjmxk&name=supplementary_material">[Supplementary Material]</a>]
-  [ <a href="https://nips.cc/media/neurips-2022/Slides/55372_kHEysnz.pdf">[Slides]</a>]
-  [ <a href="https://nips.cc/media/PosterPDFs/NeurIPS%202022/5b69b9cb83065d403869739ae7f0995e.png">[Poster]</a>]
-  [ <a href="https://csgaobb.github.io/Projects/mscoco-fsod.html">FSOD-Leaderboard</a> ]
-  [ <a href="https://github.com/gaobb/DCFS">Code</a> ]
-  <br>
-  </div>
-  <div class="spanner"></div>
-  </div>
-
-
-<div class="paper" id="APANet">
-<img class="paper" 
-src="./Imgs_files/APANet.png" 
-title="APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation">
-<div> <strong>APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation</strong><br>
-<strong>Jiacheng Chen*, Bin-Bin Gao*</strong>, Zongqing Lu, Jing-Hao Xue, Chengjie Wang, Qingmin Liao<br>
-<i>IEEE Transactions on Multimedia</i>(<strong>TMM 2022</strong>), 2022.<br>
-[ <a href="https://ieeexplore.ieee.org/document/9773019">Paper</a>  ]
-[ <a href="javascript:toggleabs('APANet')">Abstrcat</a> ]
-<preabs style="display: none;">
-Few-shot semantic segmentation aims to segment novel-class objects in a given query image with only a few labeled support images. 
-Most advanced solutions exploit a metric learning framework that performs segmentation through matching each query feature to a 
-learned class-specific prototype. However, this framework suffers from biased classification due to incomplete feature comparisons. 
-To address this issue, we present an adaptive prototype representation by introducing class-specific and class-agnostic prototypes 
-and thus construct complete sample pairs for learning semantic alignment with query features. The complementary features learning 
-manner effectively enriches feature comparison and helps yield an unbiased segmentation model in the few-shot setting. It is 
-implemented with a two-branch end-to-end network (\ie, a class-specific branch and a class-agnostic branch), which generates 
-prototypes and then combines query features to perform comparisons. In addition, the proposed class-agnostic branch is simple 
-yet effective. In practice, it can adaptively generate multiple class-agnostic prototypes for query images and learn feature 
-alignment in a self-contrastive manner. Extensive experiments on PASCAL-5i and COCO-20i demonstrate the superiority of our method. 
-At no expense of inference efficiency, our model achieves state-of-the-art results in both 1-shot and 5-shot settings for semantic segmentation.
-</preabs>
-[ <a href="javascript:togglebib('APANet')">BibTeX</a> ]
-<pre style="display: none;">@ARTICLE{APANet_TMM_2022,
-  author={Chen, Jiacheng and Gao, Bin-Bin and Lu, Zongqing and Xue, Jing-Hao and Wang, Chengjie and Liao, Qingmin},
-  journal={IEEE Transactions on Multimedia}, 
-  title={APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation}, 
-  year={2022},
-  volume={25},
-  pages={4361-4373},
-  doi={10.1109/TMM.2022.3174405}}
-</pre>
-<br>
-</div>
-<div class="spanner"></div>
-</div>
-
-<div class="paper" id="IJCNN2021"><img class="paper" 
-  src="./Imgs_files/C2F-Inst.png"
-  title="A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation">
-  <div> <strong>A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation</strong>
-  <br>Feng Luo, <strong>Bin-Bin Gao</strong>, Jiangpeng Yan and Xiu Li<br>
-  <i>In: Proceedings of International Joint Conference on Neural Networks (<strong>IJCNN 2021</strong>), Shenzhen, China, July 18-22, 2021, pp.1-8. </i><br>
-  [ <a href="https://ieeexplore.ieee.org/abstract/document/9533399">Paper</a>  ] 
-  [ <a href="javascript:toggleabs('IJCNN2021')">Abstrcat</a> ]
-  <preabs style="display: none;">
-    Boundary-based instance segmentation has drawn
-    much attention since of its attractive efficiency. However, existing
-    methods suffer from the difficulty in long-distance regression.
-    In this paper, we propose a coarse-to-fine module to address
-    the problem. Approximate boundary points are generated at the
-    coarse stage and then features of these points are sampled and
-    fed to a refined regressor for fine prediction. It is end-to-end
-    trainable since differential sampling operation is well supported
-    in the module. Furthermore, we design a holistic boundary-aware
-    branch and introduce instance-agnostic supervision to assist
-    regression. Equipped with ResNet-101, our approach achieves
-    31.7% mask AP on COCO dataset with single-scale training and
-    testing, outperforming the baseline 1.3% mask AP with less than
-    1% additional parameters and GFLOPs. Experiments also show
-    that our proposed method achieves competitive performance
-    compared to existing boundary-based methods with a lightweight design and a simple pipeline.
-  </preabs>      
-  [ <a href="javascript:togglebib('IJCNN2021')">BibTeX</a> ]
-  <pre style="display: none;">@inproceedings{luo2021coarse,
-    title={A Coarse-to-Fine Instance Segmentation Network with Learning Boundary Representation},
-    author={Luo, Feng and Gao, Bin-Bin and Yan, Jiangpeng and Li, Xiu},
-    booktitle={International Joint Conference on Neural Networks (IJCNN)},
-    pages={1--8},
-    year={2021}
-  }  
-  </pre>
-  <br>
-  </div>
-  <div class="spanner"></div>
-  </div>
-
-
-<div class="paper" id="MCAR">
-<img class="paper" 
-src="./Imgs_files/MCAR.png" 
-title="Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition">
-<div> <strong>Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition</strong><br>
-<strong>Bin-Bin Gao</strong>,Hong-Yu Zhou<br>
-<i>IEEE Transactions on Image Processing </i>(<strong>TIP 2021</strong>),20:5920-5932,2021.</i><br>
-[ <a href="https://ieeexplore.ieee.org/document/9466402">Paper</a>  ]
-[ <a href="javascript:toggleabs('MCAR')">Abstrcat</a> ]
-<preabs style="display: none;">
-Multi-label image recognition is a practical and challenging task compared to single-label image classification.
-However, previous works may be suboptimal because of a great number of object proposals or complex attentional 
-region generation modules. In this paper, we propose a simple but efficient two-stream framework to recognize
-multi-category objects from global image to local regions, similar to how human beings perceive objects. 
-To bridge the gap between global and local streams, we propose a multi-class attentional region module which 
-aims to make the number of attentional regions as small as possible and keep the diversity of these regions as 
-high as possible. Our method can efficiently and effectively recognize multi-class objects with an affordable 
-computation cost and a parameter-free region localization module. Over three benchmarks on multi-label image 
-classification, we create new state-of-the-art results with a single model only using image semantics without 
-label dependency. In addition, the effectiveness of the proposed method is extensively demonstrated under different 
-factors such as global pooling strategy, input size and network architecture.
-Code has been made available at~\url{https://github.com/gaobb/MCAR}. 
-</preabs>
-[ <a href="javascript:togglebib('MCAR')">BibTeX</a> ]
-<pre style="display: none;">@ARTICLE{MCAR_TIP_2021,
-         author = {Bin-Bin Gao and Hong-Yu Zhou},
-         title = {{Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition}},
-         booktitle = {IEEE Transactions on Image Processing (TIP)},
-         year={2021},
-         volume={30},
-         pages={5920-5932},
-}
-</pre>
-[<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
-[ <a href="https://github.com/gaobb/MCAR">Code</a> ]
-<br>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-
-<div class="paper" id="IJCAI2018"><img class="paper" 
-src="./Imgs_files/DLDL-v2-fw.png"
-title="Age Estimation Using Expectation of Label Distribution Learning">
-<div> <strong>Age Estimation Using Expectation of Label Distribution Learning</strong><br>
-<strong>Bin-Bin Gao</strong>, Hong-Yu Zhou, Jianxin Wu and Xin Geng<br>
-<i>In: Proceedings of the 27th International Joint Conference on Artificial Intelligence (<strong>IJCAI 2018</strong>), Stockholm, Sweden, July 2018, pp.712-718. </i><br>
-[ <a href="https://www.ijcai.org/proceedings/2018/0099.pdf">Paper</a>  ] 
-[ <a href="./Projects/DLDL-v2.html">Project Page</a>  ]
-[ <a href="javascript:toggleabs('IJCAI2018')">Abstrcat</a> ]
-<preabs style="display: none;">
-Age estimation performance has been greatly improved by using convolutional neural network. 
-However, existing methods have an inconsistency between the training objectives and evaluation metric, 
-so they may be suboptimal. In addition, these methods always adopt image classification or face recognition 
-models with a large amount of parameters which bring expensive computation cost and storage overhead. 
-To alleviate these issues, we design a light network architecture and propose a unified framework which 
-can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated 
-on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single
-model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method 
-can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 
-0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions.
-</preabs>      
-[ <a href="javascript:togglebib('IJCAI2018')">BibTeX</a> ]
-<pre style="display: none;">@inproceedings{gaoDLDLv2,
-           title={Age Estimation Using Expectation of Label Distribution Learning},
-           author={Gao, Bin-Bin and Zhou, Hong-Yu and Wu, Jianxin and Geng, Xin},
-           booktitle={Proceedings of the 27th International Joint Conference on Artificial Intelligence (<strong>IJCAI 2018</strong>)},
-           pages={712--718},
-           year={2018}
-            }
-
-</pre>
-[<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
-[<a href="https://github.com/gaobb/DLDL-v2">Code</a> ]
-<br>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-<div class="paper" id="SSI2018">
-<a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">
-<img class="paper"
- src="./Imgs_files/SSI2018.png"
- title="Resource constrained deep learning: Challenges and Practices">
-</a>
-<div> <strong>Resource Constrained Deep Learning: Challenges and Practices (in Chinese)</strong><br>
-Jianxin Wu, <strong>Bin-Bin Gao</strong>, Xiu-Shen Wei and Jian-Hao Luo<br>
-<i>SCIENTIA SINICA Informatics, 48(5):501-510,2018. </i><br>
-[ <a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">Paper</a>  ] 
-[ <a href="javascript:toggleabs('SSI2018')">Abstrcat</a> ]
-<preabs style="display: none;">
-Deep learning has made significant progresses in recent years. However, deep models require a lot of
-computation-related resources, and its learning process needs huge number of data points and their labels. Hence,
-one current research focus in deep learning is to reduce its resource consumptions, i.e., resource constrained deep
-learning. In this paper, we first analyze deep learning’s thirsts for the various types of resources and the challenges
-they lead to, then briefly introduce research progresses from three aspects: data, label and computation resources.
-And we give detailed introductions of these areas using our research results as examples.
-</preabs>      
-[ <a href="javascript:togglebib('SSI2018')">BibTeX</a> ]
-<pre style="display: none;">@inproceedings{SSI2018,
-           title={Resource constrained deep learning: Challenges and practices},
-           author={Wu, Jianxin and Gao, Bin-Bin and Wei, Xiu-Shen and Luo, Jian-Hao},
-           journal={SCIENTIA SINICA Informatics},
-           volume={48},
-           number={5},
-           pages={501--510},
-           year={2018}
-            }
-</pre>
-<br>
-</div>
-<div class="spanner"></div>
-</div>
-
-
-
+<!--
 
 <div class="paper" id="ICCV17">
 <img class="paper" 
 src="./Imgs_files/1AF_ICCV2017.png" 
 title="Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors">
 <div> <strong>Adaptive Feeding: Achieving Fast and Accurate Detections by Adaptively Combining Object Detectors</strong><br>
-Hong-Yu Zhou, <strong>Bin-Bin Gao</strong> and Jianxin Wu <br>
+Hong-Yu Zhou, <strong>Bin-Bin Gao</strong> and Jianxin Wu+ <br>
 <i>In: Proceedings of the IEEE International Conference on Computer Vision </i>(<strong>ICCV 2017</strong>), Venice, Italy, October 2017, pp. 3505-3513.<br>
 [ <a href="https://openaccess.thecvf.com/content_ICCV_2017/papers/Zhou_Adaptive_Feeding_Achieving_ICCV_2017_paper.pdf">Paper</a>  ] 
 [ <a href="https://funnyzhou.github.io/project/adaptive_feeding/">Project Page</a>  ]
@@ -654,7 +769,7 @@ AF leads to 50% speedup over SSD500 with the same precision on the VOC2007 test 
 src="./Imgs_files/BMVC2017_SoS.png" 
 title="Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition">
 <div> <strong>Sunrise or Sunset: Selective Comparison Learning for Subtle Attribute Recognition</strong><br>
-Hong-Yu Zhou, <strong>Bin-Bin Gao</strong> and Jianxin Wu <br>
+Hong-Yu Zhou, <strong>Bin-Bin Gao</strong> and Jianxin Wu+ <br>
 <i>In: Proceedings of the 28th British Machine Vision Conference </i>(<strong>BMVC 2017</strong>), London, UK, September 2017.<br>
 [ <a href="https://arxiv.org/pdf/1707.06335.pdf">Paper</a>  ] 
 [ <a href="https://funnyzhou.github.io/project/sos/">Project Page</a>  ]
@@ -683,54 +798,17 @@ achieve state-of-the-art results.
 </div>
 <div class="spanner"></div>
 </div>
+-->
 
-<div class="paper" id="TIP17">
-<img class="paper" 
-src="./Imgs_files/DLDL_LD.png" 
-title="Deep Label Distribution Learning with Label Ambiguity ">
-<div> <strong>Deep Label Distribution Learning with Label Ambiguity</strong><br>
-<strong>Bin-Bin Gao</strong>, Chao Xing, Chen-Wei Xie, Jianxin Wu and Xin Geng <br>
-<i>IEEE Transactions on Image Processing </i>(<strong>TIP 2017</strong>), 26(6):2825-2838,2017.<br>
-[ <a href="./Pub_files/TIP2017_DLDL.pdf">Paper</a>  ] 
-[ <a href="./Projects/DLDL.html">Project Page</a>  ]
-[ <a href="javascript:toggleabs('TIP17')">Abstrcat</a> ]
-<preabs style="display: none;">
-Convolutional Neural Networks (ConvNets) have achieved excellent recognition performance in various visual recognition tasks. 
-A large labeled training set is one of the most important factors for its success. However, it is difficult to collect sufficient 
-training images with precise labels in some domains such as apparent age estimation, head pose estimation, multi-label 
-classification and semantic segmentation. Fortunately, there is ambiguous information among labels, which makes these tasks 
-different from traditional classification. Based on this observation, we convert the label of each image into a discrete label 
-distribution, and learn the label distribution by minimizing a Kullback-Leibler divergence between the predicted and ground-truth 
-label distributions using deep ConvNets. The proposed DLDL (Deep Label Distribution Learning) method effectively utilizes the 
-label ambiguity in both feature learning and classifier learning, which prevents the network from over-fitting even when the 
-training set is small. Experimental results show that the proposed approach produces significantly better results than state-of-the-art 
-methods for age estimation and head pose estimation. At the same time, it also improves recognition performance for multi-label 
-classification and semantic segmentation tasks.
-</preabs>      
-[ <a href="javascript:togglebib('TIP17')">BibTeX</a> ]
-<pre style="display: none;">@ARTICLE{gao2016deep,
-         author={Gao, Bin-Bin and Xing, Chao and Xie, Chen-Wei and Wu, Jianxin and Geng, Xin},
-         title={Deep Label Distribution Learning with Label Ambiguity},
-         journal={IEEE Transactions on Image Processing},
-         year={2017},
-         volume={26},
-         number={6},
-         pages={2825-2838}, 
-         }
-</pre>
-[<a href="./Pub_files/TIPJCR.pdf">JCR-Q1</a>, <a href="http://www.ccf.org.cn/xspj/jsjtxxydmt/">CCF-A</a>]
-[<a href="https://github.com/gaobb/DLDL">Code</a> ]
-<br>
-</div>
-<div class="spanner"></div>
-</div>
 
+
+<!--
 <div class="paper" id="CVPR16">
 <img class="paper" 
 src="./Imgs_files/Fev_Lev.png" 
 title="Exploit Bounding Box Annotations for Multi-label Object Recognition">
 <div> <strong>Exploit Bounding Box Annotations for Multi-label Object Recognition</strong><br>
-Hao Yang, Joey Tiany Zhou, Yu Zhang, <strong>Bin-Bin Gao</strong>, Jianxin Wu and Jianfei Cai<br>
+Hao Yang, Joey Tiany Zhou, Yu Zhang, <strong>Bin-Bin Gao</strong>, Jianxin Wu+ and Jianfei Cai<br>
 <i>In: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition </i>(<strong>CVPR 2016</strong>), Las Vegas, NV, USA, June 2016, pp.280-288.<br>
 [ <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Exploit_Bounding_Box_CVPR_2016_paper.pdf">Paper</a>  ]
 [ <a href="javascript:toggleabs('CVPR16')">Abstrcat</a> ]
@@ -778,54 +856,15 @@ both datasets.
 </div>
 <div class="spanner"></div>
 </div>
+-->
 
-<div class="paper" id="AAAI2016">
-<img class="paper" 
-src="./Imgs_files/D3.png" 
-title="Representing Sets of Instances for Visual Recognition">
-<div> <strong>Representing Sets of Instances for Visual Recognition</strong><br>
-Jianxin Wu, <strong>Bin-Bin Gao</strong> and Guoqing Liu <br>
-<i>In: Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence </i>(<strong>AAAI 2016</strong>), Phoenix, Arizona, USA, Feb 2016, pp.2237-2243.<br>
-[ <a href="http://cs.nju.edu.cn/_upload/tpl/00/ed/237/template237/paper/AAAI2016_D3.pdf">Paper</a>  ] 
-[ <a href="javascript:toggleabs('AAAI2016')">Abstrcat</a> ]
-<preabs style="display: none;">
-In computer vision, a complex entity such as an image or
-video is often represented as a set of instance vectors, which
-are extracted from different parts of that entity. Thus, it is
-essential to design a representation to encode information
-in a set of instances robustly. Existing methods such as FV
-and VLAD are designed based on a generative perspective,
-and their performances fluctuate when difference types of instance
-vectors are used (i.e., they are not robust). The proposed
-D3 method effectively compares two sets as two distributions,
-and proposes a directional total variation distance
-(DTVD) to measure their dissimilarity. Furthermore, a robust
-classifier-based method is proposed to estimate DTVD robustly,
-and to efficiently represent these sets. D3 is evaluated
-in action and image recognition tasks. It achieves excellent
-robustness, accuracy and speed.
-</preabs>
-[ <a href="javascript:togglebib('AAAI2016')">BibTeX</a> ]
-<pre style="display: none;">@inproceedings{wu2016representing,
-  title={Representing Sets of Instances for Visual Recognition.},
-  author={Wu, Jianxin and Gao, Bin-Bin and Liu, Guoqing},
-  booktitle={Proceedings of the theritieth AAAI Conference on Artificial Intelligence},
-  pages={2237--2243},
-  year={2016}
-}
-</pre>
-[<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
-<br>
-</div>
-<div class="spanner"></div>
-</div>
-
+<!--
 <div class="paper" id="ICCV15_AGE">
 <img class="paper" 
 src="./Imgs_files/ICCV15_AGE.png" 
 title="Deep Label Distribution Learning for Apparent Age Estimation ">
 <div> <strong>Deep Label Distribution Learning for Apparent Age Estimation </strong><br>
-Xu Yang, <strong>Bin-Bin Gao</strong>, Chao Xing, Zeng-Wei Huo, Xiu-Shen Wei, Ying Zhou, Jianxin Wu and Xin Geng <br>
+Xu Yang, <strong>Bin-Bin Gao</strong>, Chao Xing, Zeng-Wei Huo, Xiu-Shen Wei, Ying Zhou, Jianxin Wu+ and Xin Geng <br>
 <i>In: Proceedings of the IEEE ICCV’15 ChaLearn Looking at People workshop </i>(<strong>ICCVW 2015</strong>), Santiago, Chile, Dec 2015, pp.102-108.<br>
 [ <a href="./Pub_files/iccvw15_AGE.pdf">Paper</a>  ]  
 [ <a href="./Pub_files/iccvw15_AGE_slide.pdf">Slides</a> ] 
@@ -873,7 +912,7 @@ competition organizers.
 src="./Imgs_files/ICCV15_CER.png" 
 title="Deep Spatial Pyramid Ensemble for Cultural Event  Recognition">
 <div> <strong>Deep Spatial Pyramid Ensemble for Cultural Event  Recognition</strong><br>
-Xiu-Shen Wei, <strong>Bin-Bin Gao</strong> and Jianxin Wu<br>
+Xiu-Shen Wei, <strong>Bin-Bin Gao</strong> and Jianxin Wu+<br>
 <i>In: Proceedings of the IEEE ICCV’15 ChaLearn Looking at People workshop </i>(<strong>ICCVW 2015</strong>), Santiago, Chile, Dec 2015, pp.38-44.<br>
 [ <a href="./Pub_files/iccvw15_CER.pdf">Paper</a>  ]  
 [ <a href="./Pub_files/iccvw15_CER_slide.pdf">Slides</a> ] 
@@ -918,7 +957,7 @@ performance in this challenge.
 src="./Imgs_files/ICMLA15.png" 
 title="Coordinate Descent Fuzzy Twin Support Vector Machine for Classification">
 <div> <strong>Coordinate Descent Fuzzy Twin Support Vector Machine for Classification</strong><br>
-<strong>Bin-Bin Gao</strong>, Jian-Jun Wang, Yao Wang and Chan-Yun Yang<br>
+<strong>Bin-Bin Gao</strong>, Jian-Jun Wang+, Yao Wang and Chan-Yun Yang<br>
 <i>In: Proceedings of the IEEE Conference on Machine Learning and Applications </i>(<strong>ICMLA 2015</strong>), Miami, Florida, USA, Dec 2015, pp.7-12.<br>
 [ <a href="./Pub_files/icmla15_FTWSVM.pdf">Paper</a>  ] 
 [ <a href="javascript:toggleabs('ICMLA15')">Abstrcat</a> ]
@@ -1227,7 +1266,7 @@ function googleTranslateElementInit() {
 </div>
 
 <div style="clear:both;">
-<p align="right"><font size="2"><a href="https://csgaobb.github.io/">Updated on Mar. 15, 2024.</a></font></p>
+<p align="right"><font size="2"><a href="https://csgaobb.github.io/">Updated on Mar. 21, 2024.</a></font></p>
 </div>
 
 </body>
