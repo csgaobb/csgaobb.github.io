@@ -209,12 +209,42 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
 [<a href="http://scholar.google.com/citations?user=yYviZ-oAAAAJ&hl=en">Google Scholar</a>]</h2>
 
 
+<div class="paper" id="AAAI2024">
+  <img class="paper" 
+  src="./Imgs_files/LTALIR-AAAI24" 
+  title="Learning Task-Aware Language-Image Representation for Class-Incremental Object Detection">
+  <div> <strong>Learning Task-Aware Language-Image Representation for Class-Incremental Object Detection</strong><br>
+  Hongquan Zhang*, <strong>Bin-Bin Gao*</strong>, Yi Zeng, Xudong Tian, Xin Tan, Zhizhong Zhang, Yanyun Qu, Jun Liu and Yuan Xie<sup>+</sup><br>
+  <i>In: Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intelligence </i> (<strong>AAAI 2024</strong>), Vancouver, Canada, Feb 2024, pp.-.<br>
+  [ <a href="">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('AAAI2024')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    Class-incremental object detection (CIOD) is a real-world desired capability, requiring an object detector to continuously adapt to new tasks without forgetting learned ones, with the main challenge being catastrophic forgetting. Many methods based on distillation and replay have been proposed to alleviate this problem. However, they typically learn on a pure visual backbone, neglecting the powerful representation capabilities of textual cues, which to some extent limits their performance. 
+    In this paper, we propose task-aware language-image representation to mitigate catastrophic forgetting, introducing a new paradigm for language-image-based CIOD.
+    First of all, we demonstrate the significant advantage of language-image detectors in mitigating catastrophic forgetting. Secondly, we propose a learning task-aware language-image representation method that overcomes the existing drawback of directly utilizing the language-image
+    detector for CIOD. More specifically, we learn the language-image representation of different tasks through an insulating approach in the training stage, while using the alignment scores produced by task-specific language-image representation in the inference stage. 
+    Through our proposed method, language-image detectors can be more practical for CIOD. We conduct extensive experiments on COCO 2017 and Pascal VOC 2007 and demonstrate that the proposed method achieves state-of-the-art results under the various CIOD settings.    
+  </preabs>
+  [ <a href="javascript:togglebib('AAAI2024')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{wu2016representing,
+    title={Representing Sets of Instances for Visual Recognition.},
+    author={Zhang, Hongquan and Gao, Bin-Bin and Zeng, Yi and Tian, Xudong and Tan, Xin and Zhang, Zhizhong and Qu, Yanyun and Liu, Jun and Xie, Yuan},
+    booktitle={Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intelligence},
+    pages={--},
+    year={2024}
+  }
+  </pre>
+  [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
 
 <div class="paper" id="TMM2023"><img class="paper" 
   src="./Imgs_files/ALTA-PPL.png"
   title="Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning">
   <div> <strong>Cross-Modal Alternating Learning with Task-Aware Representations for Continual Learning</strong> 
-  <br>Wujin Li*, <strong>Bin-Bin Gao*+</strong>, Bizhong Xia, Jinbao Wang, Jun Liu, Yong Liu, Chengjie Wang and Feng Zheng+<br>
+  <br>Wujin Li*, <strong>Bin-Bin Gao*<sup>+</sup></strong>, Bizhong Xia, Jinbao Wang, Jun Liu, Yong Liu, Chengjie Wang and Feng Zheng<sup>+</sup><br>
   <i> IEEE Transactions on Multimedia</i> (<strong>TMM 2023</strong>), 2023.<br>
   [ <a href="">Paper</a> ] 
   [ <a href="javascript:toggleabs('TMM2023')">Abstrcat</a> ]
@@ -258,7 +288,7 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
   src="./Imgs_files/C-3PO.png"
   title="How to Reduce Change Detection to Semantic Segmentation">
   <div> <strong>How to Reduce Change Detection to Semantic Segmentation</strong>
-  <br>Guo-Hua Wang, <strong>Bin-Bin Gao+</strong> and Chengjie Wang<br>
+  <br>Guo-Hua Wang, <strong>Bin-Bin Gao<sup>+</sup></strong> and Chengjie Wang<br>
   <i> Pattern Recognition</i> (<strong>PR 2023</strong>), 2023.<br>
   [ <a href="https://arxiv.org/pdf/2206.07557.pdf">Paper</a> ] 
   [ <a href="javascript:toggleabs('PR2023')">Abstrcat</a> ]
@@ -296,12 +326,59 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
   <div class="spanner"></div>
   </div>
 
+
+  <div class="paper" id="NeurIPS2022"><img class="paper" 
+    src="./Imgs_files/DCFS.png"
+    title="Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation">
+    <div> <strong>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</strong>
+    <br><strong>Bin-Bin Gao<sup>+</sup></strong>, Xiaochen Chen, Zhongyi Huang, Congchong Nie, Jun Liu, Jinxiang Lai, Guannan Jiang, Xi Wang and Chengjie Wang<sup>+</sup><br>
+    <i>In: Thirty-sixth Conference on Neural Information Processing Systems</i> (<strong>NeurIPS 2022</strong>), New Orleans, USA, from Nov 29th to Dec 1st, 2022, pp.18640-18652.<br>
+    [ <a href="https://nips.cc/virtual/2022/poster/55372">Paper</a> ] 
+    [ <a href="https://csgaobb.github.io/Projects/DCFS">ProjectPage</a> ]
+    [ <a href="javascript:toggleabs('NeurIPS2022')">Abstrcat</a> ]
+    <preabs style="display: none;">
+      This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which
+      requires a model to quickly adapt to novel classes with a few labeled instances. The existing
+      methods severely suffer from bias classification because of the missing label issue which naturally
+      exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that
+      the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate
+      the bias classification. Therefore, we propose an embarrassingly simple but effective method
+      that decouples the standard classifier into two heads. Then, these two individual heads are
+      capable of independently addressing clear positive samples and noisy negative samples which
+      are caused by the missing label. In this way, the model can effectively learn novel classes
+      while mitigating the effects of noisy negative samples. Without bells and whistles, our model
+      without any additional computation cost and parameters consistently outperforms its baseline
+      and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.
+      The code will be available.
+    </preabs>      
+    [ <a href="javascript:togglebib('NeurIPS2022')">BibTeX</a> ]
+    <pre style="display: none;">@inproceedings{gao2022dc,
+      title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
+      author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
+      booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
+      volume={35},
+      pages={18640--18652},
+      year={2022}
+    }  
+    </pre>
+    [ <a href="https://openreview.net/attachment?id=dVXO3Orjmxk&name=supplementary_material">[Supplementary Material]</a>]
+    [ <a href="https://nips.cc/media/neurips-2022/Slides/55372_kHEysnz.pdf">[Slides]</a>]
+    [ <a href="https://nips.cc/media/PosterPDFs/NeurIPS%202022/5b69b9cb83065d403869739ae7f0995e.png">[Poster]</a>]
+    [ <a href="https://csgaobb.github.io/Projects/mscoco-fsod.html">FSOD-Leaderboard</a> ]
+    [ <a href="https://github.com/gaobb/DCFS">Code</a> ]
+    [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
+    <br>
+    </div>
+    <div class="spanner"></div>
+    </div>
+
+
 <div class="paper" id="APANet">
 <img class="paper" 
 src="./Imgs_files/APANet.png" 
 title="APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation">
 <div> <strong>APANet: Adaptive Prototypes Alignment Network for Few-Shot Semantic Segmentation</strong><br>
-Jiacheng Chen*, <strong>Bin-Bin Gao*+</strong>, Zongqing Lu+, Jing-Hao Xue, Chengjie Wang and Qingmin Liao<br>
+Jiacheng Chen*, <strong>Bin-Bin Gao*<sup>+</sup></strong>, Zongqing Lu<sup>+</sup>, Jing-Hao Xue, Chengjie Wang and Qingmin Liao<br>
 <i>IEEE Transactions on Multimedia</i> (<strong>TMM 2022</strong>),25:4361-4373, 2022.<br>
 [ <a href="https://ieeexplore.ieee.org/document/9773019">Paper</a>  ]
 [ <a href="javascript:toggleabs('APANet')">Abstrcat</a> ]
@@ -339,7 +416,7 @@ At no expense of inference efficiency, our model achieves state-of-the-art resul
 src="./Imgs_files/MCAR.png" 
 title="Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition">
 <div> <strong>Learning to Discover Multi-Class Attentional Regions for Multi-Label Image Recognition</strong><br>
-<strong>Bin-Bin Gao+</strong> and Hong-Yu Zhou<br>
+<strong>Bin-Bin Gao<sup>+</sup></strong> and Hong-Yu Zhou<br>
 <i>IEEE Transactions on Image Processing </i> (<strong>TIP 2021</strong>),20:5920-5932,2021.</i><br>
 [ <a href="https://ieeexplore.ieee.org/document/9466402">Paper</a>  ]
 [ <a href="javascript:toggleabs('MCAR')">Abstrcat</a> ]
@@ -374,12 +451,87 @@ Code has been made available at~\url{https://github.com/gaobb/MCAR}.
 <div class="spanner"></div>
 </div>
 
+
+<div class="paper" id="SSI2018">
+  <a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">
+  <img class="paper"
+    src="./Imgs_files/SSI2018.png"
+    title="Resource constrained deep learning: Challenges and Practices">
+  </a>
+  <div> <strong>Resource Constrained Deep Learning: Challenges and Practices (in Chinese)</strong><br>
+  Jianxin Wu<sup>+</sup>, <strong>Bin-Bin Gao</strong>, Xiu-Shen Wei and Jian-Hao Luo<br>
+  <i>SCIENTIA SINICA Informatics</i>, 48(5):501-510,2018.<br>
+  [ <a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">Paper</a>  ] 
+  [ <a href="javascript:toggleabs('SSI2018')">Abstrcat</a> ]
+  <preabs style="display: none;">
+  Deep learning has made significant progresses in recent years. However, deep models require a lot of
+  computation-related resources, and its learning process needs huge number of data points and their labels. Hence,
+  one current research focus in deep learning is to reduce its resource consumptions, i.e., resource constrained deep
+  learning. In this paper, we first analyze deep learning’s thirsts for the various types of resources and the challenges
+  they lead to, then briefly introduce research progresses from three aspects: data, label and computation resources.
+  And we give detailed introductions of these areas using our research results as examples.
+  </preabs>      
+  [ <a href="javascript:togglebib('SSI2018')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{SSI2018,
+              title={Resource constrained deep learning: Challenges and practices},
+              author={Wu, Jianxin and Gao, Bin-Bin and Wei, Xiu-Shen and Luo, Jian-Hao},
+              journal={SCIENTIA SINICA Informatics},
+              volume={48},
+              number={5},
+              pages={501--510},
+              year={2018}
+              }
+  </pre>
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+
+  <div class="paper" id="IJCAI2018"><img class="paper" 
+    src="./Imgs_files/DLDL-v2-fw.png"
+    title="Age Estimation Using Expectation of Label Distribution Learning">
+    <div> <strong>Age Estimation Using Expectation of Label Distribution Learning</strong><br>
+    <strong>Bin-Bin Gao</strong>, Hong-Yu Zhou, Jianxin Wu<sup>+</sup> and Xin Geng<br>
+    <i>In: Proceedings of the 27th International Joint Conference on Artificial Intelligence</i> (<strong>IJCAI 2018</strong>), Stockholm, Sweden, July 2018, pp.712-718.<br>
+    [ <a href="https://www.ijcai.org/proceedings/2018/0099.pdf">Paper</a>  ] 
+    [ <a href="./Projects/DLDL-v2.html">Project Page</a>  ]
+    [ <a href="javascript:toggleabs('IJCAI2018')">Abstrcat</a> ]
+    <preabs style="display: none;">
+    Age estimation performance has been greatly improved by using convolutional neural network. 
+    However, existing methods have an inconsistency between the training objectives and evaluation metric, 
+    so they may be suboptimal. In addition, these methods always adopt image classification or face recognition 
+    models with a large amount of parameters which bring expensive computation cost and storage overhead. 
+    To alleviate these issues, we design a light network architecture and propose a unified framework which 
+    can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated 
+    on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single
+    model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method 
+    can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 
+    0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions.
+    </preabs>      
+    [ <a href="javascript:togglebib('IJCAI2018')">BibTeX</a> ]
+    <pre style="display: none;">@inproceedings{gaoDLDLv2,
+               title={Age Estimation Using Expectation of Label Distribution Learning},
+               author={Gao, Bin-Bin and Zhou, Hong-Yu and Wu, Jianxin and Geng, Xin},
+               booktitle={Proceedings of the 27th International Joint Conference on Artificial Intelligence (<strong>IJCAI 2018</strong>)},
+               pages={712--718},
+               year={2018}
+                }
+    
+    </pre>
+    [<a href="https://github.com/gaobb/DLDL-v2">Code</a>]
+    [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
+    <br>
+    </div>
+    <div class="spanner"></div>
+    </div>
+    
+
 <div class="paper" id="TIP17">
   <img class="paper" 
   src="./Imgs_files/DLDL_LD.png" 
   title="Deep Label Distribution Learning with Label Ambiguity ">
   <div> <strong>Deep Label Distribution Learning with Label Ambiguity</strong><br>
-  <strong>Bin-Bin Gao</strong>, Chao Xing, Chen-Wei Xie, Jianxin Wu+ and Xin Geng <br>
+  <strong>Bin-Bin Gao</strong>, Chao Xing, Chen-Wei Xie, Jianxin Wu<sup>+</sup> and Xin Geng <br>
   <i>IEEE Transactions on Image Processing </i> (<strong>TIP 2017</strong>), 26(6):2825-2838,2017.<br>
   [ <a href="./Pub_files/TIP2017_DLDL.pdf">Paper</a>  ] 
   [ <a href="./Projects/DLDL.html">Project Page</a>  ]
@@ -415,163 +567,13 @@ Code has been made available at~\url{https://github.com/gaobb/MCAR}.
   <div class="spanner"></div>
   </div>
 
-<div class="paper" id="SSI2018">
-  <a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">
-  <img class="paper"
-    src="./Imgs_files/SSI2018.png"
-    title="Resource constrained deep learning: Challenges and Practices">
-  </a>
-  <div> <strong>Resource Constrained Deep Learning: Challenges and Practices (in Chinese)</strong><br>
-  Jianxin Wu+, <strong>Bin-Bin Gao</strong>, Xiu-Shen Wei and Jian-Hao Luo<br>
-  <i>SCIENTIA SINICA Informatics</i>, 48(5):501-510,2018.<br>
-  [ <a href="http://engine.scichina.com/publisher/scp/journal/SSI/doi/10.1360/N112017-00216?slug=abstract">Paper</a>  ] 
-  [ <a href="javascript:toggleabs('SSI2018')">Abstrcat</a> ]
-  <preabs style="display: none;">
-  Deep learning has made significant progresses in recent years. However, deep models require a lot of
-  computation-related resources, and its learning process needs huge number of data points and their labels. Hence,
-  one current research focus in deep learning is to reduce its resource consumptions, i.e., resource constrained deep
-  learning. In this paper, we first analyze deep learning’s thirsts for the various types of resources and the challenges
-  they lead to, then briefly introduce research progresses from three aspects: data, label and computation resources.
-  And we give detailed introductions of these areas using our research results as examples.
-  </preabs>      
-  [ <a href="javascript:togglebib('SSI2018')">BibTeX</a> ]
-  <pre style="display: none;">@inproceedings{SSI2018,
-              title={Resource constrained deep learning: Challenges and practices},
-              author={Wu, Jianxin and Gao, Bin-Bin and Wei, Xiu-Shen and Luo, Jian-Hao},
-              journal={SCIENTIA SINICA Informatics},
-              volume={48},
-              number={5},
-              pages={501--510},
-              year={2018}
-              }
-  </pre>
-  <br>
-  </div>
-  <div class="spanner"></div>
-  </div>
-    
-<div class="paper" id="AAAI2024">
-  <img class="paper" 
-  src="./Imgs_files/LTALIR-AAAI24" 
-  title="Learning Task-Aware Language-Image Representation for Class-Incremental Object Detection">
-  <div> <strong>Learning Task-Aware Language-Image Representation for Class-Incremental Object Detection</strong><br>
-  Hongquan Zhang*, <strong>Bin-Bin Gao*</strong>, Yi Zeng, Xudong Tian, Xin Tan, Zhizhong Zhang, Yanyun Qu, Jun Liu and Yuan Xie+<br>
-  <i>In: Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intelligence </i> (<strong>AAAI 2024</strong>), Vancouver, Canada, Feb 2024, pp.-.<br>
-  [ <a href="">Paper</a>  ] 
-  [ <a href="javascript:toggleabs('AAAI2024')">Abstrcat</a> ]
-  <preabs style="display: none;">
-    Class-incremental object detection (CIOD) is a real-world desired capability, requiring an object detector to continuously adapt to new tasks without forgetting learned ones, with the main challenge being catastrophic forgetting. Many methods based on distillation and replay have been proposed to alleviate this problem. However, they typically learn on a pure visual backbone, neglecting the powerful representation capabilities of textual cues, which to some extent limits their performance. 
-    In this paper, we propose task-aware language-image representation to mitigate catastrophic forgetting, introducing a new paradigm for language-image-based CIOD.
-    First of all, we demonstrate the significant advantage of language-image detectors in mitigating catastrophic forgetting. Secondly, we propose a learning task-aware language-image representation method that overcomes the existing drawback of directly utilizing the language-image
-    detector for CIOD. More specifically, we learn the language-image representation of different tasks through an insulating approach in the training stage, while using the alignment scores produced by task-specific language-image representation in the inference stage. 
-    Through our proposed method, language-image detectors can be more practical for CIOD. We conduct extensive experiments on COCO 2017 and Pascal VOC 2007 and demonstrate that the proposed method achieves state-of-the-art results under the various CIOD settings.    
-  </preabs>
-  [ <a href="javascript:togglebib('AAAI2024')">BibTeX</a> ]
-  <pre style="display: none;">@inproceedings{wu2016representing,
-    title={Representing Sets of Instances for Visual Recognition.},
-    author={Zhang, Hongquan and Gao, Bin-Bin and Zeng, Yi and Tian, Xudong and Tan, Xin and Zhang, Zhizhong and Qu, Yanyun and Liu, Jun and Xie, Yuan},
-    booktitle={Proceedings of the Thirty-Eighth AAAI Conference on Artificial Intelligence},
-    pages={--},
-    year={2024}
-  }
-  </pre>
-  [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
-  <br>
-  </div>
-  <div class="spanner"></div>
-  </div>
-
-<div class="paper" id="NeurIPS2022"><img class="paper" 
-  src="./Imgs_files/DCFS.png"
-  title="Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation">
-  <div> <strong>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</strong>
-  <br><strong>Bin-Bin Gao+</strong>, Xiaochen Chen, Zhongyi Huang, Congchong Nie, Jun Liu, Jinxiang Lai, Guannan Jiang, Xi Wang and Chengjie Wang+<br>
-  <i>In: Thirty-sixth Conference on Neural Information Processing Systems</i> (<strong>NeurIPS 2022</strong>), New Orleans, USA, from Nov 29th to Dec 1st, 2022, pp.18640-18652.<br>
-  [ <a href="https://nips.cc/virtual/2022/poster/55372">Paper</a> ] 
-  [ <a href="https://csgaobb.github.io/Projects/DCFS">ProjectPage</a> ]
-  [ <a href="javascript:toggleabs('NeurIPS2022')">Abstrcat</a> ]
-  <preabs style="display: none;">
-    This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which
-    requires a model to quickly adapt to novel classes with a few labeled instances. The existing
-    methods severely suffer from bias classification because of the missing label issue which naturally
-    exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that
-    the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate
-    the bias classification. Therefore, we propose an embarrassingly simple but effective method
-    that decouples the standard classifier into two heads. Then, these two individual heads are
-    capable of independently addressing clear positive samples and noisy negative samples which
-    are caused by the missing label. In this way, the model can effectively learn novel classes
-    while mitigating the effects of noisy negative samples. Without bells and whistles, our model
-    without any additional computation cost and parameters consistently outperforms its baseline
-    and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.
-    The code will be available.
-  </preabs>      
-  [ <a href="javascript:togglebib('NeurIPS2022')">BibTeX</a> ]
-  <pre style="display: none;">@inproceedings{gao2022dc,
-    title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
-    author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
-    booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
-    volume={35},
-    pages={18640--18652},
-    year={2022}
-  }  
-  </pre>
-  [ <a href="https://openreview.net/attachment?id=dVXO3Orjmxk&name=supplementary_material">[Supplementary Material]</a>]
-  [ <a href="https://nips.cc/media/neurips-2022/Slides/55372_kHEysnz.pdf">[Slides]</a>]
-  [ <a href="https://nips.cc/media/PosterPDFs/NeurIPS%202022/5b69b9cb83065d403869739ae7f0995e.png">[Poster]</a>]
-  [ <a href="https://csgaobb.github.io/Projects/mscoco-fsod.html">FSOD-Leaderboard</a> ]
-  [ <a href="https://github.com/gaobb/DCFS">Code</a> ]
-  [<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
-  <br>
-  </div>
-  <div class="spanner"></div>
-  </div>
-
-
-<div class="paper" id="IJCAI2018"><img class="paper" 
-src="./Imgs_files/DLDL-v2-fw.png"
-title="Age Estimation Using Expectation of Label Distribution Learning">
-<div> <strong>Age Estimation Using Expectation of Label Distribution Learning</strong><br>
-<strong>Bin-Bin Gao</strong>, Hong-Yu Zhou, Jianxin Wu+ and Xin Geng<br>
-<i>In: Proceedings of the 27th International Joint Conference on Artificial Intelligence</i> (<strong>IJCAI 2018</strong>), Stockholm, Sweden, July 2018, pp.712-718.<br>
-[ <a href="https://www.ijcai.org/proceedings/2018/0099.pdf">Paper</a>  ] 
-[ <a href="./Projects/DLDL-v2.html">Project Page</a>  ]
-[ <a href="javascript:toggleabs('IJCAI2018')">Abstrcat</a> ]
-<preabs style="display: none;">
-Age estimation performance has been greatly improved by using convolutional neural network. 
-However, existing methods have an inconsistency between the training objectives and evaluation metric, 
-so they may be suboptimal. In addition, these methods always adopt image classification or face recognition 
-models with a large amount of parameters which bring expensive computation cost and storage overhead. 
-To alleviate these issues, we design a light network architecture and propose a unified framework which 
-can jointly learn age distribution and regress age. The effectiveness of our approach has been demonstrated 
-on apparent and real age estimation tasks. Our method achieves new state-of-the-art results using the single
-model with 36$\times$ fewer parameters and 2.6$\times$ reduction in inference time. Moreover, our method 
-can achieve comparable results as the state-of-the-art even though model parameters are further reduced to 
-0.9M~(3.8MB disk storage). We also analyze that Ranking methods are implicitly learning label distributions.
-</preabs>      
-[ <a href="javascript:togglebib('IJCAI2018')">BibTeX</a> ]
-<pre style="display: none;">@inproceedings{gaoDLDLv2,
-           title={Age Estimation Using Expectation of Label Distribution Learning},
-           author={Gao, Bin-Bin and Zhou, Hong-Yu and Wu, Jianxin and Geng, Xin},
-           booktitle={Proceedings of the 27th International Joint Conference on Artificial Intelligence (<strong>IJCAI 2018</strong>)},
-           pages={712--718},
-           year={2018}
-            }
-
-</pre>
-[<a href="https://github.com/gaobb/DLDL-v2">Code</a>]
-[<a href="http://www.ccf.org.cn/xspj/rgzn/">CCF-A</a>]
-<br>
-</div>
-<div class="spanner"></div>
-</div>
-
 
 <div class="paper" id="AAAI2016">
   <img class="paper" 
   src="./Imgs_files/D3.png" 
   title="Representing Sets of Instances for Visual Recognition">
   <div> <strong>Representing Sets of Instances for Visual Recognition</strong><br>
-  Jianxin Wu+, <strong>Bin-Bin Gao</strong> and Guoqing Liu <br>
+  Jianxin Wu<sup>+</sup>, <strong>Bin-Bin Gao</strong> and Guoqing Liu <br>
   <i>In: Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence </i>(<strong>AAAI 2016</strong>), Phoenix, Arizona, USA, Feb 2016, pp.2237-2243.<br>
   [ <a href="http://cs.nju.edu.cn/_upload/tpl/00/ed/237/template237/paper/AAAI2016_D3.pdf">Paper</a>  ] 
   [ <a href="javascript:toggleabs('AAAI2016')">Abstrcat</a> ]
