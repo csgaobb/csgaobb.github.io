@@ -176,7 +176,7 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
     <li> Feb. 27, 2024: 🎉🎉🎉 A paper on fully unsupervised anomaly detection benchmark is accepted by <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.</li>  
     <li> Dec. 09, 2023: 🎉🎉🎉 Three papers on anomaly detection, continual detection and matched detection are accepted by <a href="https://aaai.org/Conferences/AAAI-24/">AAAI 2024</a>.</li>  
     <li> Nov. 23, 2023: 🎉🎉🎉 A paper on cross-modal continual learning is accepted by <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046"> IEEE Trans. Multimedia</a>.</li>
-    <li> Mar. 28, 2023: A paper on label distribution learning is accepted by <a href="https://www.editorialmanager.com/ncaa"> Neural Computing and Applications</a>.</li>
+    <li> Mar. 28, 2023: A paper on label distribution learning is accepted by <a href="https://www.editorialmanager.com/NCA"> Neural Computing and Applications</a>.</li>
     <li> Feb. 24, 2023: A paper on few-shot image classification is accepted by <a href="https://ijcai-23.org/">IJCAI-2023</a>.</li>
     <li> Jan. 01, 2023: A paper on change detection is accepted by <a href=https://www.sciencedirect.com/journal/pattern-recognition"> Pattern Recognition</a>.</li>
     <li> Nov. 18, 2022: A paper on few-shot image classification is accepted by <a href="https://aaai.org/Conferences/AAAI-23/">AAAI 2023</a>.</li>
@@ -325,51 +325,91 @@ I have severed as a reviewer (or PC member) for CVPR, ICCV, NeurIPS, AAAI, ECCV,
   <div class="spanner"></div>
   </div>
 
+<!--
+<div class="paper" id="NCA2023"><img class="paper" 
+  src="./Imgs_files/DLDLv2-Age-CAM.png"
+  title="Jointly learning distribution and expectation in a unified frameworkfor facial age and attractiveness estimation">
+  <div> <strong>Jointly learning distribution and expectation in a unified frameworkfor facial age and attractiveness estimation</strong>
+  <br> <strong>Bin-Bin Gao<sup>+</sup></strong><br>
+  <i> Neural Computing and Applications </i> (<strong>NCA 2023</strong>),35:15583–15599, 2023.<br>
+  [ <a href="https://doi.org/10.1007/s00521-023-08563-4">Paper</a> ] 
+  [ <a href="javascript:toggleabs('NCA2023')">Abstrcat</a> ]
+  <preabs style="display: none;">
+  Label distribution learning achieved promising results on ordinal regression tasks such as facial age and attractivenessestimation, 
+  especially using deep label distribution learning (DLDL) methods, introducing the label distribution learninginto deep convolutional 
+  neural networks. However, existing DLDL methods have an inconsistency between the trainingobjectives and the evaluation metric, so 
+  they may be suboptimal. In addition, these methods always adopt image classi-fication or face recognition models with a large amount 
+  of parameters, which carry expensive computation cost and storageoverhead. In this paper, we firstly analyze the essential 
+  relationship between two state-of-the-art methods (ranking CNNand DLDL) and show that the ranking method is in fact learning label 
+  distribution implicitly. This result thus firstly unifiestwo existing popular state-of-the-art methods into the DLDL framework. 
+  Second, in order to alleviate the inconsistency andreduce resource consumption, we design a lightweight network architecture and 
+  propose a unified framework which canjointly learn label distribution and regress expectation value. The effectiveness of our 
+  approach has been demonstrated ontypical ordinal regression tasks including facial age and attractiveness estimation. Our method 
+  achieves new state-of-the-artresults using the single model with 369 fewer parameters and 39 faster inference speed. 
+  </preabs>      
+  [ <a href="javascript:togglebib('NCA2023')">BibTeX</a> ]
+  <pre style="display: none;">@article{gao2023jointly,
+    title={Jointly learning distribution and expectation in a unified framework for facial age and attractiveness estimation},
+    author={Gao, Bin-Bin},
+    journal={Neural Computing and Applications (NCA 2033)},
+    volume={35},
+    number={21},
+    pages={15583--15599},
+    doi={https://doi.org/10.1007/s00521-023-08563-4},
+    year={2023}
+  }
+  </pre>
+  [<a href="https://www.letpub.com.cn/index.php?page=journalapp&view=detail&journalid=6123">SCI3</a>, <a href="https://www.ccf.org.cn/Academic_Evaluation/AI/">CCF-C</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
+-->
 
-  <div class="paper" id="NeurIPS2022"><img class="paper" 
-    src="./Imgs_files/DCFS.png"
-    title="Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation">
-    <div> <strong>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</strong>
-    <br><strong>Bin-Bin Gao<sup>+</sup></strong>, Xiaochen Chen, Zhongyi Huang, Congchong Nie, Jun Liu, Jinxiang Lai, Guannan Jiang, Xi Wang and Chengjie Wang<sup>+</sup><br>
-    <i>In: Thirty-sixth Conference on Neural Information Processing Systems</i> (<strong>NeurIPS 2022</strong>), New Orleans, USA, from Nov 29th to Dec 1st, 2022, pp.18640-18652.<br>
-    [ <a href="https://nips.cc/virtual/2022/poster/55372">Paper</a> ] 
-    [ <a href="https://csgaobb.github.io/Projects/DCFS">ProjectPage</a> ]
-    [ <a href="javascript:toggleabs('NeurIPS2022')">Abstrcat</a> ]
-    <preabs style="display: none;">
-      This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which
-      requires a model to quickly adapt to novel classes with a few labeled instances. The existing
-      methods severely suffer from bias classification because of the missing label issue which naturally
-      exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that
-      the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate
-      the bias classification. Therefore, we propose an embarrassingly simple but effective method
-      that decouples the standard classifier into two heads. Then, these two individual heads are
-      capable of independently addressing clear positive samples and noisy negative samples which
-      are caused by the missing label. In this way, the model can effectively learn novel classes
-      while mitigating the effects of noisy negative samples. Without bells and whistles, our model
-      without any additional computation cost and parameters consistently outperforms its baseline
-      and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.
-      The code will be available.
-    </preabs>      
-    [ <a href="javascript:togglebib('NeurIPS2022')">BibTeX</a> ]
-    <pre style="display: none;">@inproceedings{gao2022dc,
-      title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
-      author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
-      booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
-      volume={35},
-      pages={18640--18652},
-      year={2022}
-    }  
-    </pre>
-    [ <a href="https://openreview.net/attachment?id=dVXO3Orjmxk&name=supplementary_material">[Supplementary Material]</a>]
-    [ <a href="https://nips.cc/media/neurips-2022/Slides/55372_kHEysnz.pdf">[Slides]</a>]
-    [ <a href="https://nips.cc/media/PosterPDFs/NeurIPS%202022/5b69b9cb83065d403869739ae7f0995e.png">[Poster]</a>]
-    [ <a href="https://csgaobb.github.io/Projects/mscoco-fsod.html">FSOD-Leaderboard</a> ]
-    [ <a href="https://github.com/gaobb/DCFS">Code</a> ]
-    [<a href="https://www.ccf.org.cn/Academic_Evaluation/AI/">CCF-A</a>]
-    <br>
-    </div>
-    <div class="spanner"></div>
-    </div>
+<div class="paper" id="NeurIPS2022"><img class="paper" 
+  src="./Imgs_files/DCFS.png"
+  title="Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation">
+  <div> <strong>Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation</strong>
+  <br><strong>Bin-Bin Gao<sup>+</sup></strong>, Xiaochen Chen, Zhongyi Huang, Congchong Nie, Jun Liu, Jinxiang Lai, Guannan Jiang, Xi Wang and Chengjie Wang<sup>+</sup><br>
+  <i>In: Thirty-sixth Conference on Neural Information Processing Systems</i> (<strong>NeurIPS 2022</strong>), New Orleans, USA, from Nov 29th to Dec 1st, 2022, pp.18640-18652.<br>
+  [ <a href="https://nips.cc/virtual/2022/poster/55372">Paper</a> ] 
+  [ <a href="https://csgaobb.github.io/Projects/DCFS">ProjectPage</a> ]
+  [ <a href="javascript:toggleabs('NeurIPS2022')">Abstrcat</a> ]
+  <preabs style="display: none;">
+    This paper focus on few-shot object detection~(FSOD) and instance segmentation~(FSIS), which
+    requires a model to quickly adapt to novel classes with a few labeled instances. The existing
+    methods severely suffer from bias classification because of the missing label issue which naturally
+    exists in a few-shot scenario and is first formally proposed by us. Our analysis suggests that
+    the standard classification head of most FSOD or FSIS models needs to be decoupled to mitigate
+    the bias classification. Therefore, we propose an embarrassingly simple but effective method
+    that decouples the standard classifier into two heads. Then, these two individual heads are
+    capable of independently addressing clear positive samples and noisy negative samples which
+    are caused by the missing label. In this way, the model can effectively learn novel classes
+    while mitigating the effects of noisy negative samples. Without bells and whistles, our model
+    without any additional computation cost and parameters consistently outperforms its baseline
+    and state-of-the-art by a large margin on PASCAL VOC and MS-COCO benchmarks for FSOD and FSIS tasks.
+    The code will be available.
+  </preabs>      
+  [ <a href="javascript:togglebib('NeurIPS2022')">BibTeX</a> ]
+  <pre style="display: none;">@inproceedings{gao2022dc,
+    title={Decoupling Classifier for Boosting Few-shot Object Detection and Instance Segmentation},
+    author={Gao, Bin-Bin and Chen, Xiaochen and Huang, Zhongyi and Nie, Congchong and Liu, Jun and Lai, Jinxiang and Jiang, Guannan and Wang, Xi and Wang, Chengjie},
+    booktitle={Thirty-sixth Conference on Neural Information Processing Systems (NeurIPS 2022)},
+    volume={35},
+    pages={18640--18652},
+    year={2022}
+  }  
+  </pre>
+  [ <a href="https://openreview.net/attachment?id=dVXO3Orjmxk&name=supplementary_material">Supplementary Material</a>]
+  [ <a href="https://nips.cc/media/neurips-2022/Slides/55372_kHEysnz.pdf">Slides</a>]
+  [ <a href="https://nips.cc/media/PosterPDFs/NeurIPS%202022/5b69b9cb83065d403869739ae7f0995e.png">Poster</a>]
+  [ <a href="https://csgaobb.github.io/Projects/mscoco-fsod.html">FSOD-Leaderboard</a> ]
+  [ <a href="https://github.com/gaobb/DCFS">Code</a> ]
+  [<a href="https://www.ccf.org.cn/Academic_Evaluation/AI/">CCF-A</a>]
+  <br>
+  </div>
+  <div class="spanner"></div>
+  </div>
 
 
 <div class="paper" id="APANet">
@@ -1190,7 +1230,7 @@ Twin support vector machine~(TSVM) is a powerful learning algorithm by solving a
 <li><a href="https://www.editorialmanager.com/RTIP">Journal of Real-Time Image Processing (JRTIP)</a></li>
 <li><a href="https://mc.manuscriptcentral.com/tmi-ieee">IEEE Transactions on Medical Imaging (TMI)</a></li>
 <li><a href="https://www.springer.com/journal/10115">Knowledge and Information Systems (KAIA)</a></li>
-<li><a href="https://www.editorialmanager.com/ncaa">Neural Computing and Applications(NCAA)</a></li>
+<li><a href="https://www.editorialmanager.com/NCA">Neural Computing and Applications(NCA)</a></li>
 </font></p>
 </ul>
 </div>
