@@ -188,7 +188,7 @@ PAGE = r"""<!doctype html>
   <style>
     :root{--bg:#f5f7fb;--panel:#fff;--ink:#152033;--muted:#657086;--line:#e3e8f1;--brand:#3558d4;--brand2:#6846c7;--soft:#edf2ff;--green:#18794e;--shadow:0 10px 35px rgba(25,38,75,.09)}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(145deg,#f8faff,#f4f7fb 48%,#f5faf8);color:var(--ink);font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-    button,input,select{font:inherit}.hero{background:linear-gradient(120deg,#152759,#3558d4 58%,#6846c7);color:#fff;padding:42px 22px 82px}.hero-inner,main,.footer{max-width:1240px;margin:auto}
+    button,input,select{font:inherit}.hero{background:linear-gradient(120deg,#152759,#3558d4 58%,#6846c7);color:#fff;padding:42px 22px 82px}.hero-inner,main,.footer{max-width:1240px;margin:auto}.hero-inner{position:relative}.hero-star{position:absolute;top:2px;right:0;min-height:28px}.hero-star>a{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border:1px solid rgba(255,255,255,.45);border-radius:8px;background:rgba(255,255,255,.12);color:#fff;font-size:13px;font-weight:700;text-decoration:none}.hero-star>a:hover{background:rgba(255,255,255,.22)}
     .eyebrow{font-weight:700;letter-spacing:.12em;color:#cdd9ff;text-transform:uppercase}.hero h1{margin:5px 0 8px;font-size:clamp(30px,5vw,48px);line-height:1.15}.hero p{margin:0;color:#dfe6ff;font-size:16px}
     main{margin-top:-52px;padding:0 18px 48px}.search-panel{position:sticky;top:0;z-index:8;padding:16px;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border:1px solid rgba(227,232,241,.9);border-radius:18px;box-shadow:var(--shadow)}
     .search-row{display:grid;grid-template-columns:minmax(260px,1fr) 170px 160px;gap:10px}.search-wrap{position:relative}.search-wrap span{position:absolute;left:13px;top:10px;color:#8b95a8}.search-wrap input{padding-left:38px}
@@ -203,11 +203,11 @@ PAGE = r"""<!doctype html>
     .pagination{display:flex;justify-content:center;align-items:center;gap:7px;flex-wrap:wrap;margin:22px 0}.pagination button{min-width:38px;height:38px;border:1px solid var(--line);border-radius:9px;background:#fff;color:#40506b;cursor:pointer}.pagination button.active{background:var(--brand);border-color:var(--brand);color:#fff}.pagination button:disabled{opacity:.42;cursor:not-allowed}
     .empty{padding:55px 20px;text-align:center;background:#fff;border:1px solid var(--line);border-radius:15px;color:var(--muted)}.footer{padding:0 20px 34px;color:var(--muted);font-size:13px}.footer a{color:var(--brand);font-weight:650;text-decoration:none}.footer a:hover{text-decoration:underline}
     .noscript{margin:20px;padding:20px;background:#fff4e8;border:1px solid #ffd9ad;border-radius:12px}
-    @media(max-width:760px){.hero{padding-top:30px}.search-row{grid-template-columns:1fr}.search-panel{position:relative}.stats{grid-template-columns:1fr 1fr}.paper{padding:15px}.status{align-items:flex-start;flex-direction:column}.clear-btn{margin-left:0}.divider{display:none}}
+    @media(max-width:760px){.hero{padding-top:30px}.hero-star{position:static;margin-bottom:12px}.search-row{grid-template-columns:1fr}.search-panel{position:relative}.stats{grid-template-columns:1fr 1fr}.paper{padding:15px}.status{align-items:flex-start;flex-direction:column}.clear-btn{margin-left:0}.divider{display:none}}
   </style>
 </head>
 <body>
-  <header class="hero"><div class="hero-inner"><div class="eyebrow" data-i18n="eyebrow">Paper Explorer</div><h1 data-i18n="heading">NeurIPS 2026 Paper Search</h1><p data-i18n="intro">Search titles, authors, Paper IDs, and abstracts. Abstracts load on demand for a fast initial page.</p></div></header>
+  <header class="hero"><div class="hero-inner"><div class="hero-star"><a class="github-button" href="https://github.com/csgaobb/csgaobb.github.io" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star csgaobb/csgaobb.github.io on GitHub">Star</a></div><div class="eyebrow" data-i18n="eyebrow">Paper Explorer</div><h1 data-i18n="heading">NeurIPS 2026 Paper Search</h1><p data-i18n="intro">Search titles, authors, Paper IDs, and abstracts. Abstracts load on demand for a fast initial page.</p></div></header>
   <main>
     <section class="search-panel" aria-label="Search and filters">
       <div class="search-row">
@@ -231,6 +231,7 @@ PAGE = r"""<!doctype html>
   <footer class="footer"><span data-i18n="dataSource">Data source:</span> <a href="https://github.com/hongsong-wang/NeurIPS2026" target="_blank" rel="noopener noreferrer">hongsong-wang/NeurIPS2026</a>. <span data-i18n="footerNote">“View abstract” loads only the relevant 100-paper shard; full-abstract search runs in a background worker.</span></footer>
   <noscript><div class="noscript">This paper explorer requires JavaScript.</div></noscript>
   <script defer src="paper-data/papers-index.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script>
   (() => {
     "use strict";
