@@ -1,0 +1,33 @@
+{
+  "name": "top2scientists",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "data:download": "python3 scripts/download_data.py",
+    "data:build": "python3 scripts/build_database.py",
+    "data:compress": "gzip -9 -c data/scientists.db > data/scientists.db.gz",
+    "data:setup": "npm run data:download && npm run data:build && npm run data:compress"
+  },
+  "dependencies": {
+    "@sqlite.org/sqlite-wasm": "^3.53.4-build2",
+    "qrcode": "^1.5.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4",
+    "@types/node": "^20",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.1.1",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^7.1.12"
+  }
+}

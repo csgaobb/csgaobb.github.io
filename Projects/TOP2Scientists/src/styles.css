@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f7fb;
+  --foreground: #152033;
+  --hero-from: #152759;
+  --hero-mid: #3558d4;
+  --hero-to: #6846c7;
+  --ink-soft: #dfe6ff;
+  --ink-eyebrow: #cdd9ff;
+  --line: #e3e8f1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Inter, -apple-system, system-ui, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "SFMono-Regular", "Roboto Mono", monospace;
+}
+
+body {
+  background: linear-gradient(145deg, #f8faff, #f4f7fb 48%, #f5faf8);
+  color: var(--foreground);
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--hero-from), var(--hero-mid) 58%, var(--hero-to));
+  color: #fff;
+  padding: 28px 18px 76px;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  margin: 0;
+  color: var(--ink-eyebrow);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 6px 0 8px;
+  font-size: clamp(28px, 4.6vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.hero-intro {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--ink-soft);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.hero-source {
+  flex-shrink: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.hero-source:hover {
+  color: #fff;
+}
+
+.search-panel {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: calc(100% - 36px);
+  max-width: 72rem;
+  margin: -52px auto 0;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(227, 232, 241, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(25, 38, 75, 0.09);
+}
+
+.search-panel.is-pinned {
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 10px 28px rgba(25, 38, 75, 0.12);
+}
+
+.search-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.search-wrap svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #8b95a8;
+}
+
+.search-wrap input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px 0 38px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #fff;
+  color: var(--foreground);
+  font-size: 15px;
+  line-height: 24px;
+  outline: none;
+}
+
+.search-wrap input::placeholder {
+  color: #9aa3b5;
+}
+
+.search-wrap input:focus {
+  border-color: #3558d4;
+  box-shadow: 0 0 0 3px rgba(53, 88, 212, 0.12);
+}
+
+.scope-select {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.scope-select select {
+  height: 44px;
+  padding: 0 28px 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: #fff;
+  color: var(--foreground);
+  font-size: 15px;
+  outline: none;
+  appearance: none;
+}
+
+.scope-select select:focus {
+  border-color: #3558d4;
+  box-shadow: 0 0 0 3px rgba(53, 88, 212, 0.12);
+}
+
+.scope-select svg {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  color: #8b95a8;
+  pointer-events: none;
+}
+
+.search-meta {
+  margin: 12px 2px 0;
+  color: #5b667a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.search-meta strong {
+  color: var(--foreground);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.search-suggest {
+  position: absolute;
+  inset: calc(100% + 8px) 0 auto;
+  z-index: 50;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 35px rgba(25, 38, 75, 0.09);
+}
+
+@media (max-width: 640px) {
+  .search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .scope-select select {
+    width: 100%;
+  }
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: rgba(53, 88, 212, 0.18);
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  header,
+  main,
+  footer,
+  .search-panel,
+  .no-print {
+    display: none !important;
+  }
+
+  .print-overlay {
+    position: static !important;
+    inset: auto !important;
+    display: block !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+  }
+
+  #scientist-print-card {
+    zoom: 1;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
+#scientist-print-card {
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+@media screen {
+  #scientist-print-card {
+    zoom: 0.6;
+  }
+}
