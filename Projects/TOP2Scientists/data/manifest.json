@@ -1,27 +1,9 @@
 {
-  "dataset_id": "btchxktzyw",
-  "version": 9,
-  "doi": "10.17632/btchxktzyw.9",
-  "source_url": "https://elsevier.digitalcommonsdata.com/public-api/zip/btchxktzyw/download/9",
-  "downloaded_at": "2026-10-10T07:16:39.236086+00:00",
-  "archive": {
-    "filename": "btchxktzyw-9.zip",
-    "size": 203727402,
-    "sha256": "8329809a3d672a06405413a3c24902092312e7c3e873457341e506b7cc4b841a"
-  },
-  "files": [
-    {
-      "list_type": "career",
-      "filename": "Table_1_Authors_career_2025_pubs_since_1788_wopp_extracted_202608.xlsx",
-      "size": 103226624,
-      "sha256": "cf5fd523dcb369b066a41b901f861c703d696ca7d3be907a94ff6ec0f59e4ec1"
-    },
-    {
-      "list_type": "single_year",
-      "filename": "Table_1_Authors_singleyr_2025_pubs_since_1788_wopp_extracted_202608.xlsx",
-      "size": 101670201,
-      "sha256": "8bd46b5cbdc4de05ea09afc662623ca3059b4d705d4582045c5244edf94b02f5"
-    }
-  ],
-  "license": "CC BY-NC 3.0"
+  "totalCareer": 243949,
+  "totalSingleYear": 249310,
+  "institutions": 38435,
+  "countries": 186,
+  "fields": 20,
+  "subfields": 174,
+  "shardSize": 400
 }

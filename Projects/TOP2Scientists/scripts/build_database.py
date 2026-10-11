@@ -97,7 +97,8 @@ def as_int(value: str) -> int | None:
 
 
 def record(row: dict[str, str], list_type: str) -> tuple[object, ...]:
-    citation_column = "nc9625 (ns)" if list_type == "career" else "nc2525 (ns)"
+    cites_ns = "nc9625 (ns)" if list_type == "career" else "nc2525 (ns)"
+    cites_all = "nc9625" if list_type == "career" else "nc2525"
     rank_subfield = as_int(row.get("rank sm-subfield-1 (ns)", ""))
     subfield_count = as_int(row.get("sm-subfield-1 count", ""))
     percentile = None
@@ -119,11 +120,33 @@ def record(row: dict[str, str], list_type: str) -> tuple[object, ...]:
         row.get("cntry", "").upper(),
         row.get("sm-field", ""),
         row.get("sm-subfield-1", ""),
+        row.get("sm-subfield-2", ""),
         as_int(row.get("np6025", "")),
-        as_int(row.get(citation_column, "")),
+        as_int(row.get(cites_ns, "")),
+        as_int(row.get(cites_all, "")),
         as_int(row.get("h25 (ns)", "")),
+        as_int(row.get("h25", "")),
         as_float(row.get("hm25 (ns)", "")),
+        as_float(row.get("hm25", "")),
         as_float(row.get("c (ns)", "")),
+        as_float(row.get("c", "")),
+        as_int(row.get("rank", "")),
+        as_int(row.get("nps (ns)", "")),
+        as_int(row.get("nps", "")),
+        as_int(row.get("ncs (ns)", "")),
+        as_int(row.get("ncs", "")),
+        as_int(row.get("cpsf (ns)", "")),
+        as_int(row.get("cpsf", "")),
+        as_int(row.get("ncsf (ns)", "")),
+        as_int(row.get("ncsf", "")),
+        as_int(row.get("npsfl (ns)", "")),
+        as_int(row.get("npsfl", "")),
+        as_int(row.get("ncsfl (ns)", "")),
+        as_int(row.get("ncsfl", "")),
+        as_int(row.get("npciting (ns)", "")),
+        as_int(row.get("npciting", "")),
+        as_float(row.get("cprat (ns)", "")),
+        as_float(row.get("cprat", "")),
         percentile,
         self_percent,
         as_int(row.get("firstyr", "")),
@@ -145,11 +168,33 @@ CREATE TABLE records (
   country TEXT NOT NULL DEFAULT '',
   field TEXT NOT NULL DEFAULT '',
   subfield TEXT NOT NULL DEFAULT '',
+  subfield2 TEXT NOT NULL DEFAULT '',
   papers INTEGER,
   citations INTEGER,
+  citations_all INTEGER,
   h_index INTEGER,
+  h_index_all INTEGER,
   hm_index REAL,
+  hm_index_all REAL,
   c_score REAL,
+  c_score_all REAL,
+  rank_global_all INTEGER,
+  single_papers INTEGER,
+  single_papers_all INTEGER,
+  single_cites INTEGER,
+  single_cites_all INTEGER,
+  first_papers INTEGER,
+  first_papers_all INTEGER,
+  first_cites INTEGER,
+  first_cites_all INTEGER,
+  last_papers INTEGER,
+  last_papers_all INTEGER,
+  last_cites INTEGER,
+  last_cites_all INTEGER,
+  citing_papers INTEGER,
+  citing_papers_all INTEGER,
+  cite_ratio REAL,
+  cite_ratio_all REAL,
   percentile REAL,
   self_citation_pct REAL,
   first_publication_year INTEGER,
@@ -176,10 +221,15 @@ CREATE VIRTUAL TABLE records_fts USING fts5(
 INSERT = """
 INSERT INTO records (
   scopus_id, list_type, rank_global, rank_subfield, name, affiliation,
-  country, field, subfield, papers, citations, h_index, hm_index, c_score,
+  country, field, subfield, subfield2, papers, citations, citations_all,
+  h_index, h_index_all, hm_index, hm_index_all, c_score, c_score_all,
+  rank_global_all, single_papers, single_papers_all, single_cites, single_cites_all,
+  first_papers, first_papers_all, first_cites, first_cites_all,
+  last_papers, last_papers_all, last_cites, last_cites_all,
+  citing_papers, citing_papers_all, cite_ratio, cite_ratio_all,
   percentile, self_citation_pct, first_publication_year, last_publication_year,
   subfield_count, in_top2
-) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 """
 
 
